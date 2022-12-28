@@ -53,4 +53,4 @@ A bad set of commits would then be:
 
 In the ideal situation, all the commit messages are planned out ahead of time by creating a solid list of project tasks, deadlines, milestones, etc.
 
-This helped me understand it better: https://examples.yourdictionary.com/imperative-sentence-examples.html
+This helped me understand it better: <https://examples.yourdictionary.com/imperative-sentence-examples.html>
