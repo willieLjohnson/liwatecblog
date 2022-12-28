@@ -2,7 +2,7 @@
 title: 'The Best Commit Messages'
 excerpt: '
 The best commit messages are like retrospective task list items.
-When we return to these commit messages, we should be able to recreate the project just by following them like steps. We can also use them as material for something else such as a tutorial, a project timeline, or a project review.
+When we return to these commit messages, we should be able to recreate the project just by following them like steps on a roadmap. We can also use them as material for something else such as a tutorial, a project timeline, or a project review.
 Some people describe them as instructions for a computer; instead, they are akin to a guide for a human.
 The best commit messages are also concise but clear and easy to understand.
 Ideally, all the commit messages are planned out ahead of time by creating a solid list of project tasks, deadlines, milestones, etc.
@@ -30,7 +30,7 @@ The best commit messages are like retrospective task list items. For example:
 
 ```
 
-When we return to these commit messages, we should be able to recreate the project just by following them like steps. We can also use them as material for something else such as a tutorial, a project timeline, or a project review.
+When we return to these commit messages, we should be able to recreate the project just by following them like steps on a roadmap. We can also use them as material for something else such as a tutorial, a project timeline, or a project review.
 
 Some people describe them as instructions for a computer; instead, they are more akin to a guide for a human.
 
