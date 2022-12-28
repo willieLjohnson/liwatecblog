@@ -1,5 +1,5 @@
 import { GITHUB, LIWATEC, TWITTER, YOUTUBE } from "../lib/constants";
-import Gif from "./image";
+import Social from "./social";
 
 const Intro = () => {
   return (
@@ -7,34 +7,11 @@ const Intro = () => {
       <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
         Log.
       </h1>
-      <h4 className="text-center md:self-end md:text-left text-lg md:mt-5 md:pl-8">
-        <a
-          href={TWITTER}
-          className="font-semibold hover:underline hover:text-blue-600 hover:font-extrabold duration-200 transition-colors"
-        >
-          TW
-        </a>
-        {" - "}
-        <a
-          href={YOUTUBE}
-          className="font-semibold hover:underline hover:text-blue-600 hover:font-extrabold duration-200 transition-colors"
-        >
-          YT
-        </a>
-        {" - "}
-        <a
-          href={GITHUB}
-          className="font-semibold hover:underline hover:text-blue-600 hover:font-extrabold duration-200 transition-colors"
-        >
-          GH
-        </a>
-        {" - "}
-        <a
-          href={LIWATEC}
-          className="font-semibold hover:underline hover:text-blue-600 hover:font-extrabold duration-200 transition-colors"
-        >
-          LTSC
-        </a>
+      <h4 className="text-center md:self-end text-lg md:mt-5 md:pl-8 space-x-5">
+        <Social title="TW" url={TWITTER} />
+        <Social title="YT" url={YOUTUBE} />
+        <Social title="GH" url={GITHUB} />
+        <Social title="LTSC" url={LIWATEC} />
       </h4>
     </section>
   );
