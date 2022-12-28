@@ -12,6 +12,7 @@ const Social = ({ title, url, img }: Props) => {
   return (
     <Link
       href={url}
+      target="_blank"
       className={cn(
         "border-b-4 hover:border-r-4 hover:border-t-2 hover:border-l-4 hover:border-b-8",
         {

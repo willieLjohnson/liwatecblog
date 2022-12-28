@@ -32,7 +32,7 @@ The best commit messages are like retrospective task list items. For example:
 
 When we return to these commit messages, we should be able to recreate the project just by following them like steps. We can also use them as material for something else such as a tutorial, a project timeline, or a project review.
 
-Some people describe them as instructions for a computer; instead, these are described as instructions for a human.
+Some people describe them as instructions for a computer; instead, they are more akin to a guide for a human.
 
 The best commit messages are also concise but clear and easy to understand.
 
@@ -51,6 +51,6 @@ A bad set of commits would then be:
 
 ```
 
-In the ideal situation, all the commit messages are planned out ahead of time by creating a solid list of project tasks, deadlines, milestones, etc.
+Ideally, all the commit messages are planned in advance with a solid list of project tasks, deadlines, milestones, etc.
 
-This helped me understand it better: <https://examples.yourdictionary.com/imperative-sentence-examples.html>
+This helped me understand how to write them better: <https://examples.yourdictionary.com/imperative-sentence-examples.html>
