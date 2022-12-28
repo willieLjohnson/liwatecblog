@@ -1,19 +1,307 @@
 ---
-title: 'Learn How to Pre-render Pages Using Static Generation with Next.js'
-excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
+title: 'Hello World'
+excerpt: 'Hello Hallo Здрастуйте Hola Ola こんにちは Përshëndetje Salam 여보세요 Ciao Ahoj добры дзень Hoi'
 coverImage: '/assets/blog/hello-world/cover.jpg'
 date: '2020-03-16T05:35:07.322Z'
 author:
-  name: Tim Neutkens
-  picture: '/assets/blog/authors/tim.jpeg'
+  name: WL
+  picture: '/assets/blog/authors/wLiwa-320.png'
 ogImage:
   url: '/assets/blog/hello-world/cover.jpg'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+## Hello World! 👋🏾
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+## hallo
 
-## Lorem Ipsum
+## Përshëndetje
 
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+## ሀሎ
+
+
+## مرحبا
+
+
+## Բարեւ
+
+
+## Salam
+
+
+## kaixo
+
+
+## добры дзень
+
+
+## হ্যালো
+
+
+## zdravo
+
+
+## Здравейте
+
+
+## Hola
+
+
+## kumusta
+
+
+## 你好
+
+
+## 你好
+
+
+## Bonghjornu
+
+
+## zdravo
+
+
+## Ahoj
+
+
+## Hej
+
+
+## Hallo
+
+
+## saluton
+
+
+## Tere
+
+
+## Hei
+
+
+## Bonjour
+
+
+## Hoi
+
+
+## ola
+
+
+## გამარჯობა
+
+
+## Hallo
+
+
+## Χαίρετε
+
+
+## નમસ્તે
+
+
+## bonjou
+
+
+## sannu
+
+
+## aloha
+
+
+## שלום
+
+
+## नमस्ते
+
+
+## nyob zoo
+
+
+## Helló
+
+
+## Halló
+
+
+## Nnọọ
+
+
+## Halo
+
+
+## Dia dhuit
+
+
+## Ciao
+
+
+## こんにちは
+
+
+## halo
+
+
+## ಹಲೋ
+
+
+## Сәлеметсіз бе
+
+
+## សួស្តី
+
+
+## 여보세요
+
+
+## Slav
+
+
+## салам
+
+
+## ສະບາຍດີ
+
+
+## Salve
+
+
+## Sveiki
+
+
+## Sveiki
+
+
+## Hallo
+
+
+## Здраво
+
+
+## Salama
+
+
+## hello
+
+
+## ഹലോ
+
+
+## Bongu
+
+
+## tena koutou
+
+
+## नमस्कार
+
+
+## Сайн уу
+
+
+## ဟယ်လို
+
+
+## नमस्कार
+
+
+## Hallo
+
+
+## Moni
+
+
+## سلام
+
+
+## سلام
+
+
+## dzień dobry
+
+
+## Olá
+
+
+## ਸਤ ਸ੍ਰੀ ਅਕਾਲ
+
+
+## Salut
+
+
+## Здравствуйте
+
+
+## talofa
+
+
+## Halò
+
+
+## Здраво
+
+
+## Lumela
+
+
+## mhoro
+
+
+## سلام
+
+
+## හෙලෝ
+
+
+## Ahoj
+
+
+## zdravo
+
+
+## hello
+
+
+## Hola
+
+
+## Halo
+
+
+## hello
+
+
+## Hallå
+
+
+## Kamusta
+
+## Салом
+
+## வணக்கம்
+
+## హలో
+
+## สวัสดี
+
+## Merhaba
+
+## Здрастуйте
+
+## ہیلو
+
+## Salom
+
+## xin chào
+
+## Helo
+
+## Mholweni
+
+## העלא
+
+## Pẹlẹ o
+
+## Sawubona
+
+## Hello
