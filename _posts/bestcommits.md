@@ -13,7 +13,7 @@ author:
   name: WL
   picture: '/assets/blog/authors/wLiwa-320.png'
 ogImage:
-  url: '/assets/blog/hello-world/cover.jpg'
+  url: '/assets/blog/dpl/rubiks-twist.jpg'
 ---
 
 ## The best Commit Messages
