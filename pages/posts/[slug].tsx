@@ -37,7 +37,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <meta property="og:title" content={post.title} />
                 <meta property="og:type" content="article" />
                 <meta property="og:description" content={post.excerpt} />
-                <meta property="og:image" content={post.ogImage.url} />
+                <meta name="description" content={post.excerpt} />
                 <meta
                   property="og:url"
                   content={`https://www.willieliwa.com/posts/${post.slug}`}
