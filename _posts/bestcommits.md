@@ -1,5 +1,5 @@
 ---
-title: 'The Best Commit Messages'
+title: 'How to Write the Best Commit Messages'
 excerpt: '
 The best commit messages are like retrospective task list items.
 When we return to these commit messages, we should be able to recreate the project just by following them like steps on a roadmap. We can also use them as material for something else such as a tutorial, a project timeline, or a project review.
