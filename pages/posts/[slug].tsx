@@ -18,6 +18,16 @@ type Props = {
   preview?: boolean;
 };
 
+function truncateString(str: string, num: number): string {
+  if (str === undefined) {
+    return "";
+  }
+  if (str.length <= num) {
+    return str;
+  }
+  return str.slice(0, num) + "...";
+}
+
 export default function Post({ post, morePosts, preview }: Props) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
@@ -30,28 +40,30 @@ export default function Post({ post, morePosts, preview }: Props) {
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
-          <>
-            <article className="mb-32">
-              <Head>
-                <title>{post.title}</title>
-                <meta property="og:title" content={post.title} />
-                <meta property="og:type" content="article" />
-                <meta property="og:description" content={post.excerpt} />
-                <meta name="description" content={post.excerpt} />
-                <meta
-                  property="og:url"
-                  content={`https://www.willieliwa.com/posts/${post.slug}`}
-                />
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
+          <article className="mb-32">
+            <Head>
+              <title>{post.title}</title>
+              <meta property="og:title" content={post.title} key="title" />
+              <meta property="og:type" content="article" key="type" />
+              <meta
+                property="og:description"
+                content={truncateString(post.excerpt, 25)}
+                key="description"
               />
-              <PostBody content={post.content} />
-            </article>
-          </>
+              <meta
+                property="og:url"
+                content={`https://www.willieliwa.com/posts/${post.slug}`}
+                key="url"
+              />
+            </Head>
+            <PostHeader
+              title={post.title}
+              coverImage={post.coverImage}
+              date={post.date}
+              author={post.author}
+            />
+            <PostBody content={post.content} />
+          </article>
         )}
       </Container>
     </Layout>
@@ -67,6 +79,7 @@ type Params = {
 export async function getStaticProps({ params }: Params) {
   const post = getPostBySlug(params.slug, [
     "title",
+    "excerpt",
     "date",
     "slug",
     "author",
