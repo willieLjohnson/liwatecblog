@@ -47,7 +47,7 @@ export default function Post({ post, morePosts, preview }: Props) {
               <meta property="og:type" content="article" key="type" />
               <meta
                 property="og:description"
-                content={truncateString(post.excerpt, 25)}
+                content={truncateString(post.excerpt, 296)}
                 key="description"
               />
               <meta
