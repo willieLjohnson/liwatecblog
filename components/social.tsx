@@ -21,19 +21,7 @@ const Social = ({ title, url, img }: Props) => {
         }
       )}
     >
-      {img ? (
-        <Image
-          src={img}
-          alt={`Image of ${title}`}
-          className={cn("shadow-sm w-full", {
-            "hover:shadow-lg transition-shadow duration-200": title,
-          })}
-          width={100}
-          height={100}
-        />
-      ) : (
-        <>{title}</>
-      )}
+      <i className="fas fa-heart"></i> {title}
     </Link>
   );
 };
