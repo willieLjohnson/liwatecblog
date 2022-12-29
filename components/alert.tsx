@@ -37,25 +37,25 @@ const Alert = ({ preview }: Props) => {
             <>
               <h4 className="text-center text-lg m-2 space-x-10">
                 <a
-                  href={TWITTER}
+                  href="./"
                   className="font-semibold hover:underline hover:text-blue-600 hover:font-extrabold duration-200 transition-colors"
                 >
                   LOG
                 </a>
                 <a
-                  href={YOUTUBE}
+                  href="https://www.liwatec.xyz/about"
                   className="font-semibold hover:underline hover:text-blue-600 hover:font-extrabold duration-200 transition-colors"
                 >
                   ABOUT
                 </a>
                 <a
-                  href={GITHUB}
+                  href="https://www.liwatec.xyz/posts"
                   className="font-semibold hover:underline hover:text-blue-600 hover:font-extrabold duration-200 transition-colors"
                 >
                   GALLERY
                 </a>
                 <a
-                  href={LIWATEC}
+                  href="https://www.liwatec.xyz"
                   className="font-semibold hover:underline hover:text-blue-600 hover:font-extrabold duration-200 transition-colors"
                 >
                   LTSC
