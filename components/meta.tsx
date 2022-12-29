@@ -36,7 +36,11 @@ const Meta = () => {
         name="description"
         content={`${BLOG_NAME} Blog about Video Game Design, Art, and Programming.`}
       />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+      <meta
+        property="og:image"
+        content={`https://www.willieliwa.com/${HOME_OG_IMAGE_URL}`}
+        key="siteImage"
+      />
     </Head>
   );
 };
