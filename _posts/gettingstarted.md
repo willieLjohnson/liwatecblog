@@ -32,6 +32,7 @@ Game development is a fun and rewarding process that allows you to bring your id
 "
 coverImage: '/assets/blog/startgame/tetris.png'
 date: '2022-12-29T06:29:07.322Z'
+updated: '2022-12-29T06:29:07.322Z'
 author:
   name: WL
   picture: '/assets/blog/authors/wLiwa-320.png'

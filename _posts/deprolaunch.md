@@ -5,6 +5,7 @@ Ideas are everywhere and they shape our reality. They are real, living, breathin
 '
 coverImage: '/assets/blog/dpl/monkey.png'
 date: '2022-12-28T14:02:07.322Z'
+updated: '2022-12-28T14:02:07.322Z'
 author:
   name: WL
   picture: '/assets/blog/authors/wLiwa-320.png'

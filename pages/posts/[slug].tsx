@@ -116,6 +116,7 @@ export async function getStaticProps({ params }: Params) {
     "title",
     "excerpt",
     "date",
+    "updated",
     "slug",
     "author",
     "content",

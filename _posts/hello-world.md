@@ -3,6 +3,7 @@ title: 'Hello World'
 excerpt: 'Hello Hallo Здрастуйте Hola Ola こんにちは Përshëndetje Salam 여보세요 Ciao Ahoj добры дзень Hoi'
 coverImage: '/assets/blog/hello-world/cover.jpg'
 date: '2022-12-26T05:35:07.322Z'
+updated: '2022-12-26T05:35:07.322Z'
 author:
   name: WL
   picture: '/assets/blog/authors/wLiwa-320.png'
