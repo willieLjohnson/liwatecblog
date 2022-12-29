@@ -61,7 +61,11 @@ export default function Post({ post, morePosts, preview }: Props) {
                 key="url"
               />
 
-              <meta property="twitter:title" content={post.title} key="title" />
+              <meta
+                property="twitter:title"
+                content={post.title}
+                key="twitterTitle"
+              />
               <meta
                 property="twitter:card"
                 content="summary_large_image"
