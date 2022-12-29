@@ -4,6 +4,7 @@ import Container from "../../components/container";
 import PostBody from "../../components/post-body";
 import Header from "../../components/header";
 import PostHeader from "../../components/post-header";
+import MoreStories from "../../components/more-stories";
 import Layout from "../../components/layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
@@ -18,7 +19,7 @@ type Props = {
   preview?: boolean;
 };
 
-function truncateString(str: string, num: number): string {
+export function truncateString(str: string, num: number): string {
   if (str === undefined) {
     return "";
   }
@@ -117,6 +118,7 @@ export async function getStaticProps({ params }: Params) {
     "content",
     "ogImage",
     "coverImage",
+    "morePosts",
   ]);
   const content = await markdownToHtml(post.content || "");
 
@@ -132,7 +134,6 @@ export async function getStaticProps({ params }: Params) {
 
 export async function getStaticPaths() {
   const posts = getAllPosts(["slug"]);
-
   return {
     paths: posts.map((post) => {
       return {

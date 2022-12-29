@@ -1,5 +1,6 @@
 import PostPreview from "./post-preview";
 import type Post from "../interfaces/post";
+import { truncateString } from "../pages/posts/[slug]";
 
 type Props = {
   posts: Post[];
@@ -20,7 +21,7 @@ const MoreStories = ({ posts }: Props) => {
             date={post.date}
             author={post.author}
             slug={post.slug}
-            excerpt={post.excerpt}
+            excerpt={truncateString(post.excerpt, 600)}
           />
         ))}
       </div>

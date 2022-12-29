@@ -1,45 +1,41 @@
 import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
+import PostType from "../interfaces/post";
 
 const postsDirectory = join(process.cwd(), "_posts");
+let allPosts = undefined;
 
-export function getPostSlugs() {
+export function getPostSlugs(): string[] {
   return fs.readdirSync(postsDirectory);
 }
 
-export function getPostBySlug(slug: string, fields: string[] = []) {
+export function getPostBySlug(slug: string, fields: string[] = []): PostType {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
-  type Items = {
-    [key: string]: string;
-  };
-
-  const items: Items = {};
+  let post: PostType = {} as PostType;
 
   // Ensure only the minimal needed data is exposed
   fields.forEach((field) => {
     if (field === "slug") {
-      items[field] = realSlug;
+      post[field] = realSlug;
     }
     if (field === "content") {
-      items[field] = content;
+      post[field] = content;
     }
-
     if (typeof data[field] !== "undefined") {
-      items[field] = data[field];
+      post[field] = data[field];
     }
   });
-
-  return items;
+  return post;
 }
 
-export function getAllPosts(fields: string[] = []) {
+export function getAllPosts(fields: string[] = []): PostType[] {
   const slugs = getPostSlugs();
-  const posts = slugs
+  let posts = slugs
     .map((slug) => getPostBySlug(slug, fields))
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
