@@ -6,8 +6,7 @@ date: '2022-12-26T05:35:07.322Z'
 author:
   name: WL
   picture: '/assets/blog/authors/wLiwa-320.png'
-ogImage:
-  url: '/assets/blog/hello-world/cover.jpg'
+ogImage: '/assets/blog/hello-world/cover.jpg'
 ---
 
 ## Hello World! 👋🏾

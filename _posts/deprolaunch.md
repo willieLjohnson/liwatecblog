@@ -8,8 +8,7 @@ date: '2022-12-28T14:02:07.322Z'
 author:
   name: WL
   picture: '/assets/blog/authors/wLiwa-320.png'
-ogImage:
-  url: '/assets/blog/dpl/monkey.png'
+ogImage: '/assets/blog/dpl/monkey.png'
 ---
 
 ## Ideas Are Alive.
