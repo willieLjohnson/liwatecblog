@@ -70,14 +70,18 @@ export default function Post({ post, morePosts, preview }: Props) {
               <meta
                 property="twitter:image"
                 content={`https://www.willieliwa.com/${post.ogImage.url}`}
-                key="ogImage"
+                key="twitterImage"
               />
               <meta
                 property="twitter:description"
                 content={truncateString(post.excerpt, 196)}
-                key="description"
+                key="twitterDescription"
               />
-              <meta property="twitter:site" content="willieliwa" key="url" />
+              <meta
+                property="twitter:site"
+                content="willieliwa"
+                key="twitterSite"
+              />
             </Head>
             <PostHeader
               title={post.title}
