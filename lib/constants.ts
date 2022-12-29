@@ -1,6 +1,8 @@
 export const EXAMPLE_PATH = "blog-starter";
 export const CMS_NAME = "Markdown";
-export const BLOG_NAME = "LT";
+export const BLOG_NAME = "Design, Create, Play, Repeat";
+export const BLOG_DESC =
+  "An open-source no-frills video game development, design, art, and philosophy blog created by gamedevs and gamers.";
 export const TWITTER = "https://www.twitter.com/liwawil";
 export const GITHUB = "https://www.github.com/willieljohnson";
 export const YOUTUBE = "https://www.youtube.com/@wLiwa";

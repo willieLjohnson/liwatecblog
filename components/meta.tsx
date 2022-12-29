@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { BLOG_NAME, HOME_OG_IMAGE_URL } from "../lib/constants";
+import { BLOG_NAME, BLOG_DESC, HOME_OG_IMAGE_URL } from "../lib/constants";
 
 const Meta = () => {
   return (
@@ -32,10 +32,7 @@ const Meta = () => {
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <meta
-        name="description"
-        content={`${BLOG_NAME} Blog about Video Game Design, Art, and Programming.`}
-      />
+      <meta name="description" content={`${BLOG_DESC}`} />
     </Head>
   );
 };
