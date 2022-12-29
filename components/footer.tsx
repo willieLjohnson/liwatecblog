@@ -15,7 +15,7 @@ const Footer = () => {
           </h3>
           <div className="flex flex-col lg:flex-row justify-center items-center lg:w-1/2">
             <a
-              href="https://nextjs.org/docs/basic-features/pages"
+              href="https://www.twitter.com/liwawil"
               className="mx-3 bg-red-500 hover:bg-blue-500 shadow-red-400 shadow-sm hover:text-red-100 hover:py-4 hover:px-10 hover:shadow-md hover:shadow-blue-500 text-white font-extrabold py-3 px-12 lg:px-8 duration-200 transition-all mb-6 lg:mb-0"
             >
               Subscribe
