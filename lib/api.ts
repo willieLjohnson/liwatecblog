@@ -4,7 +4,6 @@ import matter from "gray-matter";
 import PostType from "../interfaces/post";
 
 const postsDirectory = join(process.cwd(), "_posts");
-let allPosts = undefined;
 
 export function getPostSlugs(): string[] {
   return fs.readdirSync(postsDirectory);
@@ -22,6 +21,9 @@ export function getPostBySlug(slug: string, fields: string[] = []): PostType {
   fields.forEach((field) => {
     if (field === "slug") {
       post[field] = realSlug;
+      post[
+        "history"
+      ] = `https://github.com/willieLjohnson/liwatecblog/commits/main/_posts/${realSlug}.md`;
     }
     if (field === "content") {
       post[field] = content;

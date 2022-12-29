@@ -1,6 +1,5 @@
 import cn from "classnames";
 import Link from "next/link";
-import Image from "next/image";
 
 type Props = {
   title: string;
@@ -8,7 +7,7 @@ type Props = {
   img?: string;
 };
 
-const Social = ({ title, url, img }: Props) => {
+const HoverButton = ({ title, url, img }: Props) => {
   return (
     <Link
       href={url}
@@ -26,4 +25,4 @@ const Social = ({ title, url, img }: Props) => {
   );
 };
 
-export default Social;
+export default HoverButton;
