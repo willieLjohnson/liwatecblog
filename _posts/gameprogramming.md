@@ -28,51 +28,43 @@ tag: gamdev
 
 ## Choosing The Right Programming Language or Game Engine for Your Game.
 
-As a game developer, one of the most important decisions you'll make before starting your game is choosing the correct programming language and game engine for your project. These tools determine the features you have at your disposal, the overall performance of your game, and the capabilities of your player will have. With so many options available, it can be overwhelming to decide which one is right. In this article, we'll explore some options for picking a programming language and game engine for your development needs.
+As a game developer, one of the most important decisions you'll make before even starting your game is choosing the right programming language and game engine to use. They determine the tools and features you have at your disposal, as well as the overall performance and capabilities of your game. However there are so many options out there and they all look pretty capable, especially now that everything has caught up to speed in 2023. So which one should you pick? In this article, we'll check out some of these options and see what best fits the development needs of your project.
 
 ### Which one to pick?
 
-Let's start by outlining what we mean by each choice.
+Here are the three options we will explore ranging from super basic to a fully featured Super Engine.
 
-- **Using a programming language** will refer to writing code in a specific programming language to create a game. Some popular programming languages for game development include C++, C#, and Python. This gives you tremendous control and flexibility as you write the code from scratch.
-- **Creating a game engine** will refer to building a software platform that provides the necessary tools and features for creating a game. This can be a complex and time-consuming process, as it involves designing and implementing the core systems for creating games, such as a rendering engine, a physics engine, and an input system. Creating a game engine requires a deep understanding of computer science concepts and programming languages.
-- **Picking a game engine** refers to selecting a pre-made game engine for your game development project. A game engine is a software platform that provides the necessary tools and features for creating a game. Some popular game engines include Unity, Unreal Engine, and GameMaker. When picking a game engine, consider the type of game you want to create, the platforms you want to target, and the level of complexity you're comfortable with. Game engines can be a faster and easier way to develop a game, as it provides a ready-made set of tools and features. However, it may also be less customizable and may not offer as much control as creating your own game engine or using a programming language.
+The most basic is just to create the game in a specific programming language by writing all the code. You can use libraries and frameworks but the general idea is that you're starting from scratch. Some popular languages for this are C++, C#, and Python. Using a programming language allows you to have a high level of control and customization over your game, as you are writing the code from scratch.
 
-To begin, we will dive into the most basic way of creating a game: with just a programming language.
+Second up is creating a game engine for creating the game. By building a software platform that provides the necessary tools and features for the game you can make it easy to create it exactly how you imagine it. This can be a complex and time-consuming process, as it involves designing and implementing the core systems that are necessary for creating any game, such as a rendering engine, a physics engine, and an input system. Creating a game engine requires a deep understanding of computer science concepts and programming languages.
+
+Where using a programming language is the simplest, picking a game engine is the easiest. Simply select one of the battle-tested and pre-made game engines that are out there. Some of the popular ones are Godot, Unity, Unreal Engine, and GameMaker. When picking a game engine, consider the type of game you want to create, the platforms you want to target, and the level of complexity you're comfortable with. Using a game engine can be a faster and easier way to develop a game, as it provides you with all the tools and features plus extra. However, it is the least customizable option and may not offer as much control as creating your own game engine or using a programming language.
+
+Let's begin by diving into the most basic way of creating a game: with just a programming language.
 
 ## Choosing a Programming Language.
 
-In game development, there are several programming languages to choose from, each with its own strengths and weaknesses. Some popular options include C++, C#, and Python. Here are some things to consider when choosing a programming language for your game.
+There are 8945 (<https://hopl.info/>) programming languages to choose from, each with its own strengths and weaknesses. We'll be talking about C++, C#, Go, Rust, TypeScript, Lua, and Python; solid choices in the game development industry. Here are some things to consider when choosing the right programming language for your game:
 
-### Consider your goals.
+##### Consider your goals.
 
-What kind of game are you looking to create? Different programming languages are better suited to different types of games. For example, creating fast-paced and action-packed games will require low-level and performant languages like C, C++, or Rust. 
+What kind of game are you looking to make? Different programming languages are better suited to different types of games. For example, if you want to create fast-paced, action-packed games, a language like C++ might be a good choice. C++ is known for its performance and low-level access to hardware, which can be useful for creating demanding games. On the other hand, if you want to create more casual, puzzle-based games, a language like Python might be a better fit. Python is known for its simplicity and ease of use, making it a good choice for beginners or for prototyping ideas quickly.
 
-On the other hand, if you want to create more casual, puzzle-based games, a minimalistic and high-level language like Python, JavaSript, and LUA might be a better fit because you'll get more time to focus on the story rather than the code. These languages are known for their simplicity and ease of use, making them a good choice for beginner developers,  prototyping ideas quickly, or creating basic games.
+##### Look for versatility.
 
-Here are some things to consider when picking a language:
-
-### Look for versatility.
-
-Choosing a programming language that is versatile enough to handle a wide range of tasks can be crucial for your project. This will allow you to be more productive and efficient as you work on your game. For example, C# is a popular choice for game development due to its versatility. This enables you to create different genres of games, from 2D mobile games to complex 3D PC games. Additionally, C# has a large and active community, which means you'll have access to a wealth of resources and support as you work on your game.
+It's important to choose a programming language that is versatile enough to handle a wide range of tasks. This will allow you to be more productive and efficient as you work on your game. For example, C# is a popular choice for game development due to its versatility. It can be used to create a wide range of games, from 2D mobile games to complex 3D PC games. Additionally, C# has a large and active community, which means you'll have access to a wealth of resources and support as you work on your game.
     
-### Focus on speed. 
+##### Focus on speed. 
 
-Game development often requires fast processing speeds. The performance of your game can be a crucial factor for gamers, so choosing a programming language that can keep up is a must. C++ is generally considered one of the fastest languages, but we also have other options like Rust and Go that are really good at what they do. 
-
-Rust is a relatively new programming language that has gained popularity in the game development community due to its speed and safety features. 
-
-Go is another fast language known for its simplicity and concurrency support. Great for creating multiplayer games, and because of its simplicity, it can be used in places where you would use Python and Typescript mentioned above.
+Game development often requires fast processing speeds, so it's important to choose a programming language that can keep up. C++ is generally considered one of the fastest languages, but there are other options like Rust and Go that can also be good choices. Rust is a relatively new programming language that has gained popularity in the game development community due to its speed and safety features. Go is another fast language that is known for its simplicity and concurrency support, which can be useful for creating multiplayer games.
 
 ## Making a game engine.
 
-Despite the substantial overhead, creating your own game engine also has some benefits that should be heavily considered. Create a unique game engine with features not available in others, and you differentiate yourself from other developers and gain a competitive advantage in the market.
+In a competitive market like the game industry, it can be mission-critical to stand out from the rest by offering something unique or better. The best way to do this is by creating your own game engine as it plays a major role in determining the look and feel of your game. You'll have full control over every aspect of your game, limited only by your programming language, device, and knowledge.
 
-If you're looking to create a game engine from scratch, you'll need a strong understanding of computer science and programming. Building a game engine can be complex and time-consuming, so it's important to be prepared for the challenges ahead. 
+You'll need to have a strong understanding of computer science and programming. It's a complex and time-consuming process, so it's important to be prepared to face challenges. For context, it takes about 1000 lines of code to create a triangle with Vulkan, meanwhile, you can create a pong clone using TypeScript, HTML, and 200 lines of spaghetti code easily. That being said, creating your own game engine can be a rewarding experience and can give you a greater understanding of how games are made.
 
-You'll need to design and implement the core systems necessary for creating games, such as a rendering engine, a physics engine, and an input system. You'll also need to consider how to design the engine to be modular and extensible so that developers can easily add new features or customize existing ones. It's not a task for the faint of heart. But if you're up for the challenge, creating your own game engine can be a rewarding experience; you gain a better understanding of how games are made, and you have a tool you can share with other developers.
-
-Here are some of the benefits of creating your own engine.
+Here are some of the general benefits of creating your own game engine:
 
 ### Customization.
 
