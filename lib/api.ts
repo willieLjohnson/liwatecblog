@@ -28,7 +28,6 @@ export function getPostBySlug(slug: string, fields: string[] = []): PostType {
     }
     if (field === "content") {
       post[field] = content;
-      console.log("content", content);
       post["excerpt"] = truncateString(content, 400);
     }
     if (typeof data[field] !== "undefined") {

@@ -126,12 +126,14 @@ export async function getStaticProps({ params }: Params) {
     "morePosts",
   ]);
   const content = await markdownToHtml(post.content || "");
+  const excerpt = await markdownToHtml(post.excerpt || "");
 
   return {
     props: {
       post: {
         ...post,
         content,
+        excerpt,
       },
     },
   };

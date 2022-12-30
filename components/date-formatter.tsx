@@ -7,8 +7,6 @@ type Props = {
 
 const DateFormatter = ({ dateString, time }: Props) => {
   const date = new Date(dateString);
-
-  console.log();
   if (time == true) {
     return (
       <time dateTime={date.toLocaleDateString("en-US")}>

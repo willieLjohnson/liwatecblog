@@ -7,6 +7,7 @@ import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import { BLOG_NAME } from "../lib/constants";
 import Post from "../interfaces/post";
+import markdownToHtml from "../lib/markdownToHtml";
 
 type Props = {
   allPosts: Post[];
@@ -48,7 +49,6 @@ export const getStaticProps = async () => {
     "author",
     "coverImage",
     "content",
-    "excerpt",
   ]);
 
   return {

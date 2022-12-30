@@ -10,12 +10,7 @@ type Props = {
 
 const Socials = ({ className }: Props) => {
   return (
-    <h4
-      className={cn(
-        "text-center md:self-end text-lg md:mt-5 md:pl-8 space-x-5",
-        className
-      )}
-    >
+    <h4 className={cn("text-center text-lg  md:pl-8 space-x-5", className)}>
       <HoverButton title="TW" url={TWITTER} />
       <HoverButton title="YT" url={YOUTUBE} />
       <HoverButton title="GH" url={GITHUB} />

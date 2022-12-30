@@ -6,7 +6,7 @@ const Intro = () => {
       <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
         Log.
       </h1>
-      <Socials className={"tracking-widest"} />
+      <Socials className="md:justify-self-end tracking-widest md:self-end pb-4 md:mt-5" />
     </section>
   );
 };

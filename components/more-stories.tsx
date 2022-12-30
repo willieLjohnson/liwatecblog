@@ -21,7 +21,7 @@ const MoreStories = ({ posts }: Props) => {
             date={post.date}
             author={post.author}
             slug={post.slug}
-            excerpt={truncateString(post.excerpt, 600)}
+            excerpt={post.excerpt}
           />
         ))}
       </div>

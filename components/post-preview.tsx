@@ -4,6 +4,8 @@ import CoverImage from "./cover-image";
 import Link from "next/link";
 import type Author from "../interfaces/author";
 import markdownToHtml from "../lib/markdownToHtml";
+import { useEffect, useState } from "react";
+import markdownStyles from "./markdown-styles.module.css";
 
 type Props = {
   title: string;
@@ -39,10 +41,35 @@ const PostPreview = ({
       <div className="text-lg mb-4">
         <DateFormatter dateString={date} />
       </div>
-      <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
+      <p
+        className={markdownStyles["markdown"]}
+        dangerouslySetInnerHTML={{ __html: excerpt }}
+      />
       <Avatar name={author.name} picture={author.picture} />
     </div>
   );
 };
+
+type Params = {
+  params: {
+    title: string;
+    coverImage: string;
+    date: string;
+    excerpt: string;
+    author: string;
+    slug: string;
+  };
+};
+
+export async function getStaticProps({ params }: Params) {
+  const excerpt = await markdownToHtml(params.excerpt || "");
+  console.log(excerpt);
+  return {
+    props: {
+      ...params,
+      excerpt,
+    },
+  };
+}
 
 export default PostPreview;
