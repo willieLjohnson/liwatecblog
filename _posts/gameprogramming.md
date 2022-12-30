@@ -1,23 +1,9 @@
 ---
 
 title: 'Choosing the Right Programming Language or Game Engine for Your Game'
-excerpt: |
-  Choosing The Right Programming Language or Game Engine for Your Game.
-
-  As a game developer, one of the most important decisions you'll make before even starting your game is choosing the right programming language and game engine to use. They determine the tools and features you have at your disposal, as well as the overall performance and capabilities of your game. With so many options available, it can be overwhelming to decide which one is right. In this article, we'll explore some options for picking a programming language and game engine for your development needs.
-
-  Which one to pick?
-
-  Let's start by outlining what we mean for each choice.
-
-  - Using a programming language will refer to the process of writing code in a specific programming language to create a game.  Some popular programming languages for game development include C++, C#, and Python. Using a programming language allows you to have a high level of control and customization over your game, as you are writing the code from scratch. Creating a game engine will refer to the process of building a software platform that provides the necessary tools and features for creating a game. This can be a complex and time-consuming process, as it involves designing and implementing the core systems that are necessary for creating games, such as a rendering engine, a physics engine, and an input system. Creating a game engine requires a deep understanding of computer science concepts and programming languages.
-  - Picking a game engine refers to the process of selecting a pre-made game engine to use for your game development project. A game engine is a software platform that provides the necessary tools and features for creating a game. Some popular game engines include Unity, Unreal Engine, and GameMaker. When picking a game engine, consider the type of game you want to create, the platforms you want to target, and the level of complexity you're comfortable with. Using a game engine can be a faster and easier way to develop a game, as it provides a ready-made set of tools and features. However, it may also be less customizable and may not offer as much control as creating your own game engine or using a programming language.
-
-  To begin we will dive into the most basic way of creating a game: with just a programming language.
-
 coverImage: '/assets/blog/gameprogramming/code.png'
-date: '2022-12-29T06:55:07.322Z'
-updated: '2022-12-29T14:29:07.322Z'
+date: '2022-12-29T06:55:07'
+updated: '2022-12-29T21:30:00'
 author:
   name: WL
   picture: '/assets/blog/authors/wLiwa-320.png'

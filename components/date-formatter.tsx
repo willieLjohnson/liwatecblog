@@ -6,10 +6,21 @@ type Props = {
 };
 
 const DateFormatter = ({ dateString, time }: Props) => {
-  const date = parseISO(dateString);
+  const date = new Date(dateString);
+
+  console.log();
   if (time == true) {
     return (
-      <time dateTime={dateString}>{format(date, "hh:mm a, LLLL	d, yyyy")}</time>
+      <time dateTime={date.toLocaleDateString("en-US")}>
+        {date.toLocaleDateString("en-US", {
+          hour: "numeric",
+          minute: "numeric",
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })}
+      </time>
     );
   }
 

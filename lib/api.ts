@@ -2,6 +2,7 @@ import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
 import PostType from "../interfaces/post";
+import { truncateString } from "../pages/posts/[slug]";
 
 const postsDirectory = join(process.cwd(), "_posts");
 
@@ -27,6 +28,8 @@ export function getPostBySlug(slug: string, fields: string[] = []): PostType {
     }
     if (field === "content") {
       post[field] = content;
+      console.log("content", content);
+      post["excerpt"] = truncateString(content, 400);
     }
     if (typeof data[field] !== "undefined") {
       post[field] = data[field];

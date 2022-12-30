@@ -1,15 +1,8 @@
 ---
 title: 'How to Write the Best Commit Messages'
-excerpt: '
-The best commit messages are like retrospective task list items.
-When we return to these commit messages, we should be able to recreate the project just by following them like steps on a roadmap. We can also use them as material for something else such as a tutorial, a project timeline, or a project review.
-Some people describe them as instructions for a computer; instead, they are akin to a guide for a human.
-The best commit messages are also concise but clear and easy to understand.
-Ideally, all the commit messages are planned out ahead of time by creating a solid list of project tasks, deadlines, milestones, etc.
-'
 coverImage: '/assets/blog/dpl/rubiks-twist.jpg'
-date: '2022-12-28T14:02:07.322Z'
-updated: '2022-12-28T14:02:07.322Z'
+date: '2022-12-28T14:02:07'
+updated: '2022-12-28T14:02:07'
 author:
   name: WL
   picture: '/assets/blog/authors/wLiwa-320.png'
