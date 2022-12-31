@@ -58,11 +58,6 @@ export default function Post({ post, morePosts, preview }: Props) {
                 content={truncateString(post.excerpt, 296)}
                 key="description"
               />
-              <meta
-                property="og:url"
-                content={`https://www.willieliwa.com/posts/${post.slug}`}
-                key="url"
-              />
 
               <meta
                 name="twitter:title"
@@ -89,9 +84,41 @@ export default function Post({ post, morePosts, preview }: Props) {
                 content="willieliwa"
                 key="twitterSite"
               />
+
+              {post.video ? (
+                <>
+                  <meta
+                    property="og:url"
+                    content={`http://www.youtube.com/watch?v=${post.video}`}
+                  ></meta>
+                  <meta
+                    property="og:title"
+                    content="vanilla ice ninja rap - go ninja, go ninja go!"
+                  ></meta>
+                  <meta property="og:type" content="video"></meta>
+                  <meta
+                    property="og:video"
+                    content={`http://www.youtube.com/v/${post.video}?version=3&autohide=1`}
+                  ></meta>
+                  <meta
+                    property="og:video:type"
+                    content="application/x-shockwave-flash"
+                  ></meta>
+                  <meta property="og:video:width" content="398"></meta>
+                  <meta property="og:video:height" content="264"></meta>
+                  <meta property="og:site_name" content="youtube"></meta>
+                </>
+              ) : (
+                <meta
+                  property="og:url"
+                  content={`https://www.willieliwa.com/posts/${post.slug}`}
+                  key="url"
+                />
+              )}
             </Head>
             <PostHeader
               title={post.title}
+              video={post.video}
               coverImage={post.coverImage}
               date={post.date}
               author={post.author}
@@ -113,6 +140,7 @@ type Params = {
 
 export async function getStaticProps({ params }: Params) {
   const post = getPostBySlug(params.slug, [
+    "video",
     "title",
     "excerpt",
     "date",

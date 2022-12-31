@@ -1,6 +1,7 @@
 import type Author from "./author";
 
 type PostType = {
+  video: string;
   slug: string;
   title: string;
   date: string;

@@ -30,6 +30,13 @@ export function getPostBySlug(slug: string, fields: string[] = []): PostType {
       post[field] = content;
       post["excerpt"] = truncateString(content, 400);
     }
+    if (field === "video") {
+      const video = data[field];
+      post["ogImage"] = post["ogImage"] = {
+        url: `https://i.ytimg.com/vi/${video}/hqdefault.jpg`,
+      };
+      post["coverImage"] = `https://i.ytimg.com/vi/${video}/hqdefault.jpg`;
+    }
     if (typeof data[field] !== "undefined") {
       post[field] = data[field];
     }
