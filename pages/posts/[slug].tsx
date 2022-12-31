@@ -65,11 +65,6 @@ export default function Post({ post, morePosts, preview }: Props) {
                 key="card"
               />
               <meta
-                name="twitter:image"
-                content={`https://www.willieliwa.com/${post.ogImage.url}`}
-                key="twitterImage"
-              />
-              <meta
                 name="twitter:description"
                 content={truncateString(post.excerpt, 196)}
                 key="twitterDescription"
@@ -100,12 +95,22 @@ export default function Post({ post, morePosts, preview }: Props) {
                   <meta property="og:site_name" content="youtube"></meta>
                   <meta
                     property="og:image"
-                    content={`${post.ogImage}`}
+                    content={`${post.ogImage.url}`}
                     key="ogImage"
+                  />
+                  <meta
+                    name="twitter:image"
+                    content={`${post.ogImage.url}`}
+                    key="twitterImage"
                   />
                 </>
               ) : (
                 <>
+                  <meta
+                    name="twitter:image"
+                    content={`https://www.willieliwa.com/${post.ogImage.url}`}
+                    key="twitterImage"
+                  />
                   <meta
                     property="og:url"
                     content={`https://www.willieliwa.com/posts/${post.slug}`}
