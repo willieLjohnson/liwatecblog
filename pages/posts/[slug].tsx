@@ -47,7 +47,6 @@ export default function Post({ post, morePosts, preview }: Props) {
             <Head>
               <title>{post.title}</title>
               <meta property="og:title" content={post.title} key="title" />
-              <meta property="og:type" content="article" key="type" />
               <meta
                 property="og:description"
                 content={truncateString(post.excerpt, 296)}
@@ -81,7 +80,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                     property="og:url"
                     content={`http://www.youtube.com/watch?v=${post.video}`}
                   ></meta>
-                  <meta property="og:type" content="video.movie"></meta>
+                  <meta property="og:type" content="video.episode"></meta>
                   <meta
                     property="og:video"
                     content={`http://www.youtube.com/watch?v=${post.video}`}
@@ -112,6 +111,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                 </>
               ) : (
                 <>
+                  <meta property="og:type" content="article" key="type" />
                   <meta
                     name="twitter:image"
                     content={`https://www.willieliwa.com/${post.ogImage.url}`}
