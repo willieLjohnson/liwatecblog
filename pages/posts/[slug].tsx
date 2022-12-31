@@ -47,11 +47,6 @@ export default function Post({ post, morePosts, preview }: Props) {
             <Head>
               <title>{post.title}</title>
               <meta property="og:title" content={post.title} key="title" />
-              <meta
-                property="og:image"
-                content={`https://www.willieliwa.com/${post.ogImage}`}
-                key="ogImage"
-              />
               <meta property="og:type" content="article" key="type" />
               <meta
                 property="og:description"
@@ -91,10 +86,6 @@ export default function Post({ post, morePosts, preview }: Props) {
                     property="og:url"
                     content={`http://www.youtube.com/watch?v=${post.video}`}
                   ></meta>
-                  <meta
-                    property="og:title"
-                    content="vanilla ice ninja rap - go ninja, go ninja go!"
-                  ></meta>
                   <meta property="og:type" content="video"></meta>
                   <meta
                     property="og:video"
@@ -107,13 +98,25 @@ export default function Post({ post, morePosts, preview }: Props) {
                   <meta property="og:video:width" content="398"></meta>
                   <meta property="og:video:height" content="264"></meta>
                   <meta property="og:site_name" content="youtube"></meta>
+                  <meta
+                    property="og:image"
+                    content={`${post.ogImage}`}
+                    key="ogImage"
+                  />
                 </>
               ) : (
-                <meta
-                  property="og:url"
-                  content={`https://www.willieliwa.com/posts/${post.slug}`}
-                  key="url"
-                />
+                <>
+                  <meta
+                    property="og:url"
+                    content={`https://www.willieliwa.com/posts/${post.slug}`}
+                    key="url"
+                  />
+                  <meta
+                    property="og:image"
+                    content={`https://www.willieliwa.com/${post.ogImage}`}
+                    key="ogImage"
+                  />
+                </>
               )}
             </Head>
             <PostHeader
