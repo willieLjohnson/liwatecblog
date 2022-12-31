@@ -81,11 +81,17 @@ export default function Post({ post, morePosts, preview }: Props) {
                     property="og:url"
                     content={`http://www.youtube.com/watch?v=${post.video}`}
                   ></meta>
-                  <meta property="og:type" content="video"></meta>
+                  <meta property="og:type" content="video.movie"></meta>
                   <meta
                     property="og:video"
-                    content={`http://www.youtube.com/v/${post.video}?version=3&autohide=1`}
+                    content={`http://www.youtube.com/watch?v=${post.video}`}
                   ></meta>
+                  <meta
+                    name="twitter:player"
+                    content={`http://www.youtube.com/watch?v=${post.video}`}
+                  />
+                  <meta name="twitter:player:width" content="360" />
+                  <meta name="twitter:player:height" content="200" />
                   <meta
                     property="og:video:type"
                     content="application/x-shockwave-flash"
