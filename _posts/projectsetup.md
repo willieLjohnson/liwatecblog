@@ -1,9 +1,9 @@
 ---
 
-title: 'Creating a Game using Vite, BabylonJS, and TypeScript Part One:  A Basic Scene with a Sphere, Light, and Camera'
+title: 'Creating a Game using Vite, BabylonJS, and TypeScript Part One:  A Basic Scene with Objects, a Light, and a Camera'
 coverImage: '/assets/blog/setup/squidgame.png'
 date: '2022-12-31T17:55:07'
-updated: '2022-12-31T23:25:00'
+updated: '2023-1-1T:25:00'
 author:
   name: WL
   picture: '/assets/blog/authors/wLiwa-320.png'
@@ -14,7 +14,6 @@ tag: gamdev
 
 ## TypeScript, Vite, and BabylonJS
 
-
 If you need a fast, reliable, and lightweight way to create 3D browser games you've landed on the right post. With BabylonJS, a powerful 3D engine; Vite, one of the latest fast and lightweight build tools; and TypeScript, arguably a better version of JavaScript, we can create decent-sized WebGL games with realistic graphics, physics, skeletal animation, and post-processing effects just to name a few of the features.
 
 Let's get right into it!
@@ -23,7 +22,7 @@ Let's get right into it!
 
 They've made it nice and simple to install Vite with a helpful CLI:
 
-Run the following commands:
+**Run the following commands:**
 
 > Pick the options `Vanilla` and `TypeScript` for this project. Replace `devlon` with the name of your game.
 ```bash
@@ -187,11 +186,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 ### src/game.ts
 
-Create `src/game.ts`. replace `src/AppOne.js` if Vite created it in our first step.
+Create `src/game.ts`. Replace the file `src/AppOne.js` if the vite-cli created it in the first step.
 
 > Finally, some BabylonJS!
 
-***Import the modules using ES6 modules.***
+**Import the modules using ES6 modules.**
 
 ```javascript
 // Imports es6 style
@@ -245,10 +244,11 @@ export default class Game {
 }
 ```
 
-**Add `createScene` function to the the bottom of the file.
+**Add the `createScene` function to the bottom of the file**
+
 ```javascript
-// es6 imports <-----| collapsed for clarity
-class Game{...} <----| don't change these in your code.
+es6 imports <------| collapsed for clarity, don't change
+class Game{...} <--| anything from prev code.
 
 var createScene = function (engine: Engine, canvas: HTMLCanvasElement) {
   // The scene that holds our objects and camrea.
@@ -293,6 +293,9 @@ var createScene = function (engine: Engine, canvas: HTMLCanvasElement) {
 
   return scene;
 };
+
+/// End of main.ts
+
 ```
 
 Your project should now like this:
@@ -322,7 +325,7 @@ index.html
 npm run dev
 ```
 
-This should open your browser `https://localhost:5173`. You can open it manually if it did not.
+This should open your browser to <https://localhost:5173>. You can open it manually if it did not. 
 
 ## Done!
 
