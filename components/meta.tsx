@@ -1,5 +1,10 @@
 import Head from "next/head";
-import { BLOG_NAME, BLOG_DESC, HOME_OG_IMAGE_URL } from "../lib/constants";
+import {
+  GAID,
+  BLOG_NAME,
+  BLOG_DESC,
+  HOME_OG_IMAGE_URL,
+} from "../lib/constants";
 import Script from "next/script";
 
 const Meta = () => {
@@ -34,11 +39,26 @@ const Meta = () => {
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta name="description" content={`${BLOG_DESC}`} />
-      <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-6DKLCP2C2Z"
-      ></Script>
-      <Script async src="./gtag.js"></Script>
+      {GAID && (
+        <>
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GAID}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GAID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
+        </>
+      )}{" "}
     </Head>
   );
 };
