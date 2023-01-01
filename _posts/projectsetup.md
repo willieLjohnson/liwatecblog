@@ -306,7 +306,7 @@ This should open your browser `https://localhost:5173`. You can open it manually
 You should see this:
 
 ![basicscene.png](https://www.willieliwa.com/assets/blog/setup/scene.png)
-> A ball and a plane -.- .... Gives us something flashier man...
+> A ball and a plane -.- .... Give us something flashier dude...
 
 But a great start! You'll have to go to the next next chapter for the flashy game features -----> [Building the Game World](/gameworld)
 
