@@ -47,15 +47,29 @@ blockquote code {
 
 blockquote p {
   background-color: transparent;
+  padding-left: 3.5em;
 }
 
 blockquote::before {
-  content: "(~￣³￣)~";
+  content: "(~￣<￣)~";
   display: block;
   font-weight: 500;
-  font-size: 2em;
-  top: 0.7em;
-  right: 5em;
+  font-size: 1.3em;
+  top: 1.7em;
+  right: 6em;
+  position: relative;
+  height: 0;
+  color: #f55;
+}
+
+blockquote::after {
+  content: "Bud:";
+  display: block;
+  font-weight: 500;
+  font-family: monospace;
+  font-size: 1.2rem;
+  top: -5rem;
+  right: -0.1rem;
   position: relative;
   height: 0;
   color: #f55;
@@ -104,12 +118,18 @@ article img:hover {
     padding-top: 2em;
   }
   blockquote::before {
-    content: "(~￣³￣)~";
     display: block;
     font-weight: 500;
-    font-size: 2em;
-    top: -0.95em;
-    right: -0.1em;
+    font-size: 1rem;
+    top: -0.95rem;
+    right: 0.2rem;
+    position: relative;
+    height: 0;
+    color: #f55;
+  }
+  blockquote::after {
+    top: -1.55rem;
+    right: 0rem;
     position: relative;
     height: 0;
     color: #f55;
