@@ -132,6 +132,7 @@ article img:hover {
     color: #f55;
   }
   blockquote::after {
+    content: "~~ Bud";
     top: -1.55rem;
     right: 0rem;
     padding-left: 0.1em;
