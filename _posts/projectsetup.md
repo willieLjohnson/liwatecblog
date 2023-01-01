@@ -1,13 +1,13 @@
 ---
 
 title: 'Creating a Game using Vite, BabylonJS, and TypeScript Part One:  A Basic Scene with a Sphere, Light, and Camera'
-coverImage: '/assets/blog/projectsetup/squidgame-nb.png'
-date: '2022-12-31T05:55:07'
+coverImage: '/assets/blog/setup/squidgame.png'
+date: '2022-12-31T17:55:07'
 updated: '2022-12-31T23:25:00'
 author:
   name: WL
   picture: '/assets/blog/authors/wLiwa-320.png'
-ogImage: '/assets/blog/projectsetup/squidgame-nb.png'
+ogImage: '/assets/blog/setup/squidgame.png'
 tag: gamdev
 
 ---
