@@ -3,7 +3,7 @@
 title: 'Creating a Game using Vite, BabylonJS, and TypeScript Part One:  A Basic Scene with Objects, a Light, and a Camera'
 coverImage: '/assets/blog/setup/squidgame.png'
 date: '2022-12-31T17:55:07'
-updated: '2023-1-1T:25:00'
+updated: '2023-01-01T00:25:00'
 author:
   name: WL
   picture: '/assets/blog/authors/wLiwa-320.png'

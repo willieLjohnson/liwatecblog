@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row justify-center items-center lg:w-1/2">
             <a
               href="https://www.twitter.com/liwawil"
-              className="lg:px-8 lg:mb-0 bg-red-500 hover:bg-blue-500 shadow-red-400 shadow-sm hover:text-red-100 hover:py-4 hover:px-10 hover:shadow-md hover:shadow-blue-500 text-white font-extrabold py-3 px-12 duration-200 transition-all mb-6"
+              className="motion-safe:animate-bounce hover:animate-none transition-all lg:px-8 lg:mb-0 bg-red-500 hover:bg-blue-500 shadow-red-400 shadow-sm hover:text-red-100 hover:py-4 hover:px-10 hover:shadow-md hover:shadow-blue-500 text-white font-extrabold py-3 px-12 duration-200 transition-all mb-6"
             >
               Subscribe
             </a>
