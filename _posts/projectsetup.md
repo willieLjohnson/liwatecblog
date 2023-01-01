@@ -14,7 +14,8 @@ tag: gamdev
 
 ## TypeScript, Vite, and BabylonJS
 
-If you need a fast, reliable, and light-weight way to create 3D browser games you've landed on the right post. With BabylonJS, a powerful 3D engine; Vite, one of the latest fast and lightweight build tools; and TypeScript, arguably a better version of JavaScript, we can create decent sized WebGL games with realistic graphics, physics, skeletal animation, and post-processing effects just to name a few of the features.
+
+If you need a fast, reliable, and lightweight way to create 3D browser games you've landed on the right post. With BabylonJS, a powerful 3D engine; Vite, one of the latest fast and lightweight build tools; and TypeScript, arguably a better version of JavaScript, we can create decent-sized WebGL games with realistic graphics, physics, skeletal animation, and post-processing effects just to name a few of the features.
 
 Let's get right into it!
 
@@ -60,20 +61,20 @@ We can continue on to our next step if this runs without any errors.
 
 ## Installing BabylonJS
 
-Run the following command to intsall babylonjs-core
+Run the following command to install babylonjs-core
 
 ```bash
-npm install --save babylonjs
+npm install --save babylon
 ```
 
-We only need BabyonJS core for now, but we install the loaders and GUI package for in another tutorial in this series.
+We only need BabyonJS core for now, but we install the loaders and GUI package in another tutorial in this series.
 
 ## Configure Vite and TypeScript 
 
 We need to configure Vite to use BabylonJS's max script so that it's easier to code and debug.
 
 Create a file called `vite.config.js` in your project root and add the following:
-> This simply tells vite to use the `babylon.max`, a human readable readable script version.
+> This simply tells vite to use the `babylon.max`, a human-readable readable script version.
 
 ```javascript
 import { defineConfig } from 'vite';
@@ -92,7 +93,7 @@ export default defineConfig(({ command, mode }) => {
 
 ## TS Config
 
-Lastly update `tsconfig.json` in root to include the vite config file.
+Lastly, update `tsconfig.json` in root to include the vite config file.
 
 ```json
 {
@@ -118,15 +119,15 @@ In `package.json` change the value of `scripts: dev` to `vite --open` to automat
 }
 ```
 
-Awesome! We have our project setup with Vite, BabylonJS, and TypeScript. We can create decent games with only these three libraries. We'll get to that later. For now let's create a basic scene.
+Awesome! We have our project set up with Vite, BabylonJS, and TypeScript. We can create decent games with only these three libraries. We'll get to that later. For now, let's create a basic scene.
 
 ## Creating the Scene
 
-In BabyonJS every game object lives in the Scene. Think of it like the "game world". We'll start by updating the index.html to make it ready to rendering.
+In BabyonJS every game object lives in the Scene. Think of it like the "game world". We'll start by updating the index.html to make it ready for rendering.
 
 ### index.html
 
-The main and potentially only HTML file you'll need. It'll start of pretty basic. Most of our code will be in modular TypeScript files in the `src/` folder. We add a `canvas` element which BabylonJS uses to render the scene, change the title of our page, and add a style element which makes the cnavas fill the screen.
+The main and potentially only HTML file you'll need. It'll start off pretty basic. Most of our code will be in modular TypeScript files in the `src/` folder. We add a `canvas` element that Babylon uses to render the scene, change the title of our page, and add a style element that makes the canvas fill the screen.
 
 ```html
 <!DOCTYPE html>
@@ -190,6 +191,8 @@ Create `src/game.ts`. replace `src/AppOne.js` if Vite created it in our first st
 
 > Finally, some BabylonJS!
 
+***Import the modules using ES6 modules.***
+
 ```javascript
 // Imports es6 style
 import {
@@ -200,7 +203,11 @@ import {
   FreeCamera,
   HemisphericLight,
 } from "babylonjs";
+```
 
+**Create the `Game` class.**
+
+```javascript
 // The game class used in `main.ts`
 export default class Game {
   engine: Engine;
@@ -214,8 +221,13 @@ export default class Game {
     });
     this.scene = createScene(this.engine, this.canvas);
   }
+}
+```
 
-	// Turns on the Game Engine "level editor" toolbars. Awesome feature! Now you have a Game Engine on par with the likes of Unity, Godot, and Unreal!
+**Add the follow methods to the bottom of `class Game`.**
+
+```javascript
+// Turns on the Game Engine "level editor" toolbars. Awesome feature! Now you have a Game Engine on par with the likes of Unity, Godot, and Unreal!
   debug(debugOn: boolean = true) {
     if (debugOn) {
       this.scene.debugLayer.show({ overlay: true });
@@ -231,6 +243,12 @@ export default class Game {
     });
   }
 }
+```
+
+**Add `createScene` function to the the bottom of the file.
+```javascript
+// es6 imports <-----| collapsed for clarity
+class Game{...} <----| don't change these in your code.
 
 var createScene = function (engine: Engine, canvas: HTMLCanvasElement) {
   // The scene that holds our objects and camrea.
@@ -244,7 +262,12 @@ var createScene = function (engine: Engine, canvas: HTMLCanvasElement) {
 
   // Attach that camera to the canvas.
   camera.attachControl(canvas, true);
+  ...
+```
 
+**Create the light, sphere, and ground plane.**
+```
+  ... 
   // A light that poitns towards 0,1,0 - straight up.
   var light = new HemisphericLight("light", new Vector3(0, 1, 0), scene);
 
@@ -272,7 +295,7 @@ var createScene = function (engine: Engine, canvas: HTMLCanvasElement) {
 };
 ```
 
-The end state of the project folder for this tutorial:
+Your project should now like this:
 
 ```bash
 index.html
@@ -293,7 +316,7 @@ index.html
 
 ## Run the Game 
 
-Let's see what we've got. 
+> Let's see what we've got. 
 
 ```bash
 npm run dev
@@ -305,8 +328,7 @@ This should open your browser `https://localhost:5173`. You can open it manually
 
 You should see this:
 
-![basicscene.png](https://www.willieliwa.com/assets/blog/setup/scene.png)
-> A ball and a plane -.- .... Give us something flashier dude...
+![basicscene.png: A picture of a ball and a sphere](https://www.willieliwa.com/assets/blog/setup/scene.png)
+> A ball and a plane -.- ....
 
-But a great start! You'll have to go to the next next chapter for the flashy game features -----> [Building the Game World](/gameworld)
-
+But a great start! You'll have to go to the next chapter for the flashy game features -----> [Building the Game World](/gameworld)
