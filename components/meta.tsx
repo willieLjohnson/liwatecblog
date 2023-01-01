@@ -1,6 +1,20 @@
 import Head from "next/head";
 import { BLOG_NAME, BLOG_DESC, HOME_OG_IMAGE_URL } from "../lib/constants";
 
+const isBrowser = () => typeof window !== "undefined"; //The approach recommended by Next.js
+
+function gtag(...args: any[]) {
+  if (!isBrowser()) {
+    return;
+  }
+  window["dataLayer"].push(args);
+}
+
+if (isBrowser() && typeof window["dataLayer"] !== "undefined") {
+  window["dataLayer"] = window["dataLayer"];
+  gtag("js", new Date());
+  gtag("config", "G-6DKLCP2C2Z");
+}
 const Meta = () => {
   return (
     <Head>
@@ -33,6 +47,10 @@ const Meta = () => {
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta name="description" content={`${BLOG_DESC}`} />
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-6DKLCP2C2Z"
+      ></script>
     </Head>
   );
 };
