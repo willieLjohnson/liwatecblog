@@ -29,7 +29,7 @@ pre code {
 blockquote {
   font-size: 1.15em;
   color: #000003;
-  background-color: rgba(0, 200, 255, 0.3);
+  background-color: rgba(0, 150, 230, 0.15);
   border-radius: 1em;
   padding: 1.05em;
   border: 1px solid #428bca33;
@@ -37,11 +37,12 @@ blockquote {
 }
 
 blockquote code {
-  background-color: rgba(255, 255, 100, 0.4);
-  color: black;
+  background-color: rgba(255, 55, 0, 0.5);
+  color: rgba(0, 0, 50, 1);
   font-weight: 600;
-  padding: 0.1em;
-  margin: 0.1em;
+  padding: 0.1rem;
+  border: 0.18rem solid black;
+  margin: 0.15rem;
 }
 
 blockquote::before {
