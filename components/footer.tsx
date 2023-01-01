@@ -7,7 +7,7 @@ type Props = {
 
 const Footer = () => {
   return (
-    <footer className="bg-neutral-50 border-t border-neutral-200">
+    <footer className="bg-neutral-50 border-t border-neutral-200 bg-transparent">
       <Container>
         <div className="flex flex-col sm:flex-col lg:flex-row items-center justify-center p-2 place-items-center">
           <h3 className=" text-[1.5rem] font-bold tracking-wider leading-loose text-center lg:text-center m-5 lg:mb-0 lg:w-1/2">
