@@ -8,3 +8,69 @@ body {
   background-position: -20px -20px;
 }
 
+code {
+  color: #000003;
+  background-color:  #ffbb7725;
+  border-radius: 0.5em;
+  border-width: 0.15em;
+  font-family: monospace;
+  transition: all 0.1s ease-in-out;
+}
+
+pre code {
+  display: block;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  max-width: 100%;
+  padding: 1em;
+}
+
+blockquote {
+  font-size: 1.15em;
+  color: #000003;
+  background-color: rgba(0, 200, 255, 0.3);
+  border-radius: 1em;
+  padding: 1.05em;
+  border: 1px solid #428bca33;
+  font-weight: 500;
+}
+
+blockquote code {
+  background-color: rgba(255, 255, 100, 0.4);
+  color: black;
+  font-weight: 600;
+  padding: 0.1em;
+  margin: 0.1em;
+}
+
+blockquote::before {
+  content: "!!!";
+  display: block;
+  font-weight: 500;
+  font-size: 2em;
+  top: -0.6em;
+  right: 1.1em;
+  position: relative;
+  height: 0;
+  color: #f55;
+}
+
+article a {
+  color: blue;
+  font-weight: 900;
+  font-family: sans-serif;
+  background: rgba(0,0,255,0.03);
+  border-radius: 2em;
+  padding: 0.2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin: 0.2em;
+  transition: 0.1s all ease-in-out;
+}
+
+article a:hover {
+  margin: 1em;
+  font-family: 900;
+  border: 1px solid blue;
+}
