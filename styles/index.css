@@ -69,15 +69,18 @@ article a {
   transition: 0.1s all ease-in-out;
 }
 
+
 article a:hover {
-  margin: 1em;
+  margin: 0.4em 0.3em 0.4em 0.3em;
+  padding: 0.5em 0.3em 0.5em 0.3em;
   font-family: 900;
   border: 1px solid blue;
+  filter: drop-shadow(0 0 1rem rgba(255,100,0,0.2));
 }
 article img {
   transition: all 0.5s ease-in-out;
   filter: drop-shadow(0 0 1rem rgba(255,50,0,0.2));
 }
 article img:hover {
-  filter: drop-shadow(0 0 2rem rgba(255,50,0,0.4));
+  filter: drop-shadow(0 0 2rem rgba(255,75,50,0.7));
 }

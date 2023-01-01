@@ -14,7 +14,7 @@ tag: gamdev
 
 ## TypeScript, Vite, and BabylonJS
 
-If you need a fast, reliable, and lightweight way to create 3D browser games you've landed on the right post. With BabylonJS, a powerful 3D engine; Vite, one of the latest fast and lightweight build tools; and TypeScript, arguably a better version of JavaScript, we can create decent-sized WebGL games with realistic graphics, physics, skeletal animation, and post-processing effects just to name a few of the features.
+If you need a fast, reliable, and lightweight way to create 3D browser games you've landed on the right post. With [BabylonJS](https://www.babylonjs.com), a powerful 3D engine; [Vite](https://www.vitejs.dev), one of the latest fast and lightweight build tools; and [TypeScript](https://www.typescriptlang.org), arguably a better version of JavaScript, we can create decent-sized WebGL games with realistic graphics, physics, skeletal animation, and post-processing effects just to name a few of the features.
 
 Let's get right into it!
 
