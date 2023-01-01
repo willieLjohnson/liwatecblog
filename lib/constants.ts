@@ -8,4 +8,4 @@ export const GITHUB = "https://www.github.com/willieljohnson";
 export const YOUTUBE = "https://www.youtube.com/@wLiwa";
 export const LIWATEC = "https://www.liwatec.xyz";
 export const HOME_OG_IMAGE_URL = "assets/blog/authors/wLiwa.png";
-export const GAID = "";
+export const GAID = "G-6DKLCP2C2Z";
