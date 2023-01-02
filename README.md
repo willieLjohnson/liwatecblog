@@ -1,4 +1,4 @@
-# LiwaTec Game Development Blog | Design, Create, Play, Repeat
+# [Game Development Blog | Design, Create, Play, Repeat](https://www.willieliwa.com)
 
 
 ![https://www.willieliwa.com/posts/projectsetup](https://github.com/willieLjohnson/liwatecblog/blob/main/public/assets/blog/setup/squidgamenb.png)
