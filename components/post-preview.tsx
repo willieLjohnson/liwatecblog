@@ -35,13 +35,12 @@ const PostPreview = ({
             <iframe
               width="1920"
               height="1080"
-              className={cn("shadow-sm w-full", {
-                "hover:shadow-lg transition-shadow duration-200  max-h-96":
+              className={cn("shadow-sm w-full z-20", {
+                "hover:drop-shadow-md hover:shadow-red-200 transition-all duration-200  max-h-96 rounded-lg":
                   slug,
               })}
               src={`https://www.youtube.com/embed/${video}`}
               title={title}
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
@@ -50,7 +49,7 @@ const PostPreview = ({
           <CoverImage slug={slug} title={title} src={coverImage} />
         )}
       </div>
-      <h3 className="text-3xl mb-3 leading-snug">
+      <h3 className="text-3xl mb-3 leading-snug hover:drop-shadow-xl hover:shadow-red-200 hover:border-2 rounded-xl transition-all duration-200 ">
         <Link
           as={`/posts/${slug}`}
           href={`https://www.youtube.com/${video}`}

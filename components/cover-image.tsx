@@ -13,8 +13,8 @@ const CoverImage = ({ title, src, slug }: Props) => {
     <Image
       src={src}
       alt={`Cover Image for ${title}`}
-      className={cn("shadow-sm w-full", {
-        "hover:shadow-xl hover:shadow-red-200 transition-all duration-200":
+      className={cn("shadow-sm w-full rounded-md", {
+        "hover:shadow-xl z-50 hover:shadow-red-200 transition-all duration-200":
           slug,
       })}
       width={1920}
