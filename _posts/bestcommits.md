@@ -2,7 +2,7 @@
 title: 'How to Write the Best Commit Messages'
 coverImage: '/assets/blog/dpl/rubiks-twist.jpg'
 date: '2022-12-28T14:02:07'
-updated: '2023-01-03T03:33:33'
+updated: '2023-01-04T12:57:33'
 author:
   name: WL
   picture: '/assets/blog/authors/wLiwa-320.png'
@@ -15,7 +15,7 @@ The best commit messages are like retrospective task list items. When we return 
 
 Here's a list of examples
 
-```
+```properties
 Add socials to page-footer.
 Add payment system to merch-page.
 [Bug] header text dissappears on hover.
@@ -31,7 +31,7 @@ The best commit messages are also concise but clear and easy to understand.
 
 A bad set of commits would then be:
 
-```
+```properties
 # What? Why? How? Where?
 - Add links. 
 

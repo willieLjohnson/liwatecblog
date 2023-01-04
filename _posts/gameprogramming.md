@@ -3,7 +3,7 @@
 title: 'Choosing the Right Programming Language or Game Engine for Your Game'
 coverImage: '/assets/blog/gameprogramming/code.png'
 date: '2022-12-29T06:55:07'
-updated: '2023-01-03T03:33:33'
+updated: '2023-01-04T12:57:33'
 author:
   name: WL
   picture: '/assets/blog/authors/wLiwa-320.png'

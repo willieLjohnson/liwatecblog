@@ -120,11 +120,15 @@
 }
 
 .markdown img {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   filter: drop-shadow(0 0 1rem rgba(255,50,0,0.2));
+  border-radius: 1.1rem;
 }
+
 .markdown img:hover {
   filter: drop-shadow(0 0 2rem rgba(255,75,50,0.7));
+  transform: scale(1.5);
+  border: solid #fe773f 0.2rem;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -151,6 +155,9 @@
     padding-left: 0.1em;
     position: relative;
     height: 0;
+  }
+  .markdown img:hover {
+    transform: scale(1.3);
   }
 }
 
