@@ -84,7 +84,7 @@ That being said, there are also potential drawbacks to using a game engine. Some
 
 Once you've chosen a programming language or game engine, the next step is to create the game itself. It's time for all the research to pay off. Here are some tips to help get you started.
 
-The post is getting too long to get into detail about this here. If you want more tips, check out ['Creating a Game using Vite, BabylonJS, and TypeScript Part One:  A Basic Scene with Objects, a Light, and a Camera'](https:www.willieliwa.com/posts/projectsetup) for how to get started.
+The post is getting too long to get into detail about this here. If you want more tips, check out ['Creating a Game using Vite, BabylonJS, and TypeScript Part One:  A Basic Scene with Objects, a Light, and a Camera'](https://www.willieliwa.com/posts/projectsetup) for how to get started.
 
 ## Being Versatile, Fast, and Ready to Learn
 
