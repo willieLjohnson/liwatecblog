@@ -9,7 +9,11 @@ type Props = {
   socialsClasses?: string;
 };
 
-const Footer = ({ footerClasses, containerClasses, socialsClasses }) => {
+export const Footer = ({
+  footerClasses,
+  containerClasses,
+  socialsClasses,
+}: Props) => {
   return (
     <footer
       className={cn(

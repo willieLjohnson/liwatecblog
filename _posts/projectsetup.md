@@ -30,7 +30,7 @@ They've made it nice and simple to install Vite with a helpful CLI:
 
 > **When running these commands,** replace `devlon` with the name of your game and pick the options `Vanilla` then `TypeScript` on the CLI menus that appear.
 
-```bash
+```properties
 npm create vite@latest devlon
 && cd devlon
 && npm install
@@ -38,7 +38,7 @@ npm create vite@latest devlon
 
 Your generated project folder should look like this:
 
-```bash
+```properties
 $tree
 your-awesome-game-name/
 ├── index.html
@@ -58,7 +58,7 @@ your-awesome-game-name/
 
 You can test it out right now by running:
 
-```bash
+```properties
 $ npm run dev
 ```
 Did you get any errors?
@@ -70,7 +70,7 @@ Next we can install BabylonJS and configure everything to work together.
 
 Run the following command to install babylonjs-core
 
-```bash
+```properties
 npm install --save babylon
 ```
 
@@ -274,7 +274,7 @@ var createScene = function (engine: Engine, canvas: HTMLCanvasElement) {
 ```
 
 **Create the light, sphere, and ground plane.**
-```
+```tsx
   ... 
   // A light that poitns towards 0,1,0 - straight up.
   var light = new HemisphericLight("light", new Vector3(0, 1, 0), scene);
@@ -308,7 +308,7 @@ var createScene = function (engine: Engine, canvas: HTMLCanvasElement) {
 
 Your project should now like this:
 
-```bash
+```properties
 index.html
 ├── node_modules
 ├── package-lock.json
@@ -329,7 +329,7 @@ index.html
 
 > Let's see what we've got. 
 
-```bash
+```properties
 npm run dev
 ```
 

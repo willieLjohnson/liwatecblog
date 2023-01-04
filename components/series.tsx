@@ -13,10 +13,10 @@ type Props = {
 
 export const SeriesBar = ({ series, className }: Props) => {
   const hasPrev = (): boolean => {
-    return typeof series.prev !== "undefined";
+    return series.prev !== undefined;
   };
   const hasNext = (): boolean => {
-    return typeof series.next !== "undefined";
+    return series.next !== undefined;
   };
 
   const Links = (): ReactNode[] => {
@@ -41,11 +41,16 @@ export const SeriesBar = ({ series, className }: Props) => {
   };
 
   const flexClasses = () => {
-    let classes = "flex flex-col justify-center text-center";
+    let classes = "flex flex-col flex-end";
     if (hasNext() && hasPrev()) {
-      return cn("lg:flex-row justify-between", [classes, className]);
+      return cn("lg:flex-row justify-between text-center", [
+        classes,
+        className,
+      ]);
+    } else if (hasNext()) {
+      return cn("md:flex-row justify-end", [classes, className]);
     } else {
-      return cn("md:flex-row justify-center", [classes, className]);
+      return cn("md:flex-row justify-center text-center", [classes, className]);
     }
   };
 

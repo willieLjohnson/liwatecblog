@@ -7,6 +7,7 @@ import typescript from "react-syntax-highlighter/dist/cjs/languages/prism/typesc
 import javascript from "react-syntax-highlighter/dist/cjs/languages/prism/javascript";
 import scss from "react-syntax-highlighter/dist/cjs/languages/prism/scss";
 import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
+import properties from "react-syntax-highlighter/dist/cjs/languages/prism/properties";
 import markdown from "react-syntax-highlighter/dist/cjs/languages/prism/markdown";
 import json from "react-syntax-highlighter/dist/cjs/languages/prism/json";
 import { duotoneSpace as theme } from "react-syntax-highlighter/dist/cjs/styles/prism";
@@ -18,6 +19,7 @@ SyntaxHighlighter.registerLanguage("typescript", typescript);
 SyntaxHighlighter.registerLanguage("javascript", javascript);
 SyntaxHighlighter.registerLanguage("scss", scss);
 SyntaxHighlighter.registerLanguage("bash", bash);
+SyntaxHighlighter.registerLanguage("properties", properties);
 SyntaxHighlighter.registerLanguage("markdown", markdown);
 SyntaxHighlighter.registerLanguage("json", json);
 

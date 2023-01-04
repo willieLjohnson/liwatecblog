@@ -1,10 +1,5 @@
 import Head from "next/head";
-import {
-  GAID,
-  BLOG_NAME,
-  BLOG_DESC,
-  HOME_OG_IMAGE_URL,
-} from "../lib/constants";
+import { GAID, BLOG_DESC } from "../lib/constants";
 import Script from "next/script";
 
 const Meta = () => {
@@ -41,11 +36,11 @@ const Meta = () => {
       <meta name="description" content={`${BLOG_DESC}`} />
       {GAID && (
         <>
-          <script
+          <Script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GAID}`}
           />
-          <script
+          <Script
             dangerouslySetInnerHTML={{
               __html: `
             window.dataLayer = window.dataLayer || [];

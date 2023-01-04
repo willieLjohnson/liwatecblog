@@ -200,7 +200,6 @@ export async function getStaticProps({ params }: Params) {
     "history",
   ]);
 
-  console.log(params.allPosts);
   return {
     props: {
       allPosts: allPosts,

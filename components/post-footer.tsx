@@ -1,5 +1,4 @@
 import Container from "./container";
-import cn from "classnames";
 import Link from "next/link";
 import {
   EXAMPLE_PATH,
@@ -9,12 +8,11 @@ import {
   LIWATEC,
 } from "../lib/constants";
 
-import PostType from "../interfaces/post";
-import Socials from "./socials";
+import { type Post } from "../interfaces/post";
 import DateFormatter from "./date-formatter";
 
 type Props = {
-  post: PostType;
+  post: Post;
 };
 
 const PostFooter = ({ post }: Props) => {
