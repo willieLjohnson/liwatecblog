@@ -73,7 +73,6 @@ const PostPreview = ({
       <p>
         <Markdown content={excerpt} />
       </p>
-      <Avatar name={author.name} picture={author.picture} />
     </div>
   );
 };

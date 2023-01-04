@@ -52,7 +52,6 @@ const HeroPost = ({
           <p className="text-lg leading-relaxed mb-4">
             <Markdown content={truncateString(excerpt, 750)} />
           </p>
-          <Avatar name={author.name} picture={author.picture} />
         </div>
       </div>
     </section>

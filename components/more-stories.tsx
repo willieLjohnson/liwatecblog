@@ -10,13 +10,13 @@ const MoreStories = ({ className, posts }: Props) => {
   return (
     <section>
       <div className="relative">
-        <h2 className="p-0 m-0 bg-transparent text-center text-8xl animate-bounce font-extrabold absolute left-[47.25%] -top-16">
+        <h2 className="p-0 m-0 bg-transparent text-center text-8xl animate-bounce font-extrabold absolute left-[47.8%] -top-12">
           V
         </h2>
       </div>
       <div className="mb-16 border-2 border-transparent"> </div>
       <div className="space-y-0 bg-transparent p-3 rounded-xl m-5 mt-0 mb-10 text-5xl md:text-7xl font-bold ">
-        <h2 className="p-0 m-0 bg-transparent border-b-black border-b-[0.9rem]">
+        <h2 className="p-0 m-0 bg-transparent border-b-black border-b-[0.4rem] text-center">
           More Posts
         </h2>
       </div>
