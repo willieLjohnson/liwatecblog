@@ -24,21 +24,16 @@ export const Footer = ({
       <Container>
         <div
           className={cn(
-            "flex flex-row items-center justify-around p-6",
+            "flex flex-col lg:flex-row items-center lg:justify-between p-6",
             containerClasses
           )}
         >
-          <h3 className="text-[1.5rem] font-bold tracking-wider leading-loose text-center lg:mb-0">
+          <h3 className="text-[2rem] font-bold tracking-wider text-center text-3xl">
             Design, Create, Play, Repeat
           </h3>
-          <div className="flex flex-row justify-center items-center">
-            <SubscribeButton className="px-8 mb-0 py-4" />
-          </div>
           <Socials
-            className={cn(
-              "p-2 pt-0 flex flex-row justify-between",
-              socialsClasses
-            )}
+            className="md:justify-self-end scale-75 bg-transparent tracking-widest md:self-end pb-[0.35rem] md:mt-5 text-5xl"
+            buttonClasses="border-b-0"
           />
         </div>
       </Container>

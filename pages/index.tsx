@@ -7,6 +7,8 @@ import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import { BLOG_NAME } from "../lib/constants";
 import { type Post } from "../interfaces/post";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
 
 type Props = {
   allPosts: Post[];

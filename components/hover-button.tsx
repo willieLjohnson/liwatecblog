@@ -1,26 +1,37 @@
 import cn from "classnames";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 type Props = {
-  title: string;
+  title?: string;
   url: string;
   img?: string;
+  className?: string;
+  icon?: IconProp;
 };
 
-const HoverButton = ({ title, url, img }: Props) => {
+const HoverButton = ({ title, url, img, className, icon }: Props) => {
   return (
     <Link
       href={url}
       target="_blank"
       className={cn(
-        "border-b-4 hover:border-r-4 hover:border-t-2 hover:border-l-4 hover:border-b-8",
+        `hover:scale-110 hover:animate-pulse ease-out ${className}`,
         {
-          "border-black font-extrabold hover:border-red-600 p-5 pt-1 pb-1 hover:text-red-700 drop-shadow-xl duration-200 transition-all":
+          "border-black font-extrabold hover:border-red-600 border-solid p-3 hover:text-red-700  duration-200 transition-all":
             title,
         }
       )}
     >
-      <i className="fas fa-heart"></i> {title}
+      {icon ? <FontAwesomeIcon size="lg" icon={icon} /> : <></>}
+      {title ? (
+        <span className="bg-black text-white p-[0.5rem] px-[0.8rem] rounded-md text-[2.4rem]">
+          {title ?? ""}
+        </span>
+      ) : (
+        <></>
+      )}
     </Link>
   );
 };

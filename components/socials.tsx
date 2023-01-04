@@ -1,20 +1,40 @@
 import cn from "classnames";
-import Link from "next/link";
-import Image from "next/image";
 import HoverButton from "./hover-button";
-import { GITHUB, LIWATEC, TWITTER, YOUTUBE } from "../lib/constants";
-
+import { GITHUB, LIWATEC, REDDIT, TWITTER, YOUTUBE } from "../lib/constants";
 type Props = {
   className: string;
+  buttonClasses?: string;
 };
 
-const Socials = ({ className }: Props) => {
+const Socials = ({ className, buttonClasses }: Props) => {
   return (
-    <h4 className={cn("text-center text-lg space-x-2", className)}>
-      <HoverButton title="TW" url={TWITTER} />
-      <HoverButton title="YT" url={YOUTUBE} />
-      <HoverButton title="GH" url={GITHUB} />
-      <HoverButton title="LTSC" url={LIWATEC} />
+    <h4
+      className={cn(
+        "text-center text-lg flex flex-row justify-between space-x-[2rem]",
+        className
+      )}
+    >
+      <HoverButton
+        className={buttonClasses}
+        icon={["fab", "twitter"]}
+        url={TWITTER}
+      />
+      <HoverButton
+        className={buttonClasses}
+        icon={["fab", "youtube"]}
+        url={YOUTUBE}
+      />
+      <HoverButton
+        className={buttonClasses}
+        icon={["fab", "github"]}
+        url={GITHUB}
+      />
+      <HoverButton
+        className={buttonClasses}
+        icon={["fab", "reddit"]}
+        url={REDDIT}
+      />
+      <HoverButton className={`${buttonClasses}`} title="LTSC" url={LIWATEC} />
     </h4>
   );
 };

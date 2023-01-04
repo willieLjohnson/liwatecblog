@@ -2,11 +2,14 @@ import Socials from "./socials";
 
 const Intro = () => {
   return (
-    <section className="flex-col md:flex-row flex items-center md:justify-between md:mb-6 md:mt-3 m-2">
-      <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
-        Log.
+    <section className="flex-col md:flex-row flex items-center md:justify-between md:mt-3 m-2 mr-0">
+      <h1 className="text-4xl md:text-[5rem] hover:animate-pulse font-extrabold tracking-loose leading-tight">
+        ~ \^/
       </h1>
-      <Socials className="md:justify-self-end tracking-widest md:self-end pb-4 md:mt-5" />
+      <Socials
+        className="md:justify-self-end bg-transparent tracking-widest md:self-end px-0 pb-[0.2rem] md:mt-5 text-5xl scale-90"
+        buttonClasses="border-b-0"
+      />
     </section>
   );
 };

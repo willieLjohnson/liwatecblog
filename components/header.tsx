@@ -2,11 +2,10 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8">
+    <h2 className="text-5xl md:text-7xl bg-transparent font-extrabold tracking-tight pl-0 ml-0 md:tracking-wide leading-loose lg:mb-12  mt-4">
       <Link href="/" className="hover:underline">
-        Log
+        {"<~"} \^/
       </Link>
-      .
     </h2>
   );
 };
