@@ -34,26 +34,6 @@ const Meta = () => {
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta name="description" content={`${BLOG_DESC}`} />
-      {GAID && (
-        <>
-          <Script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GAID}`}
-          />
-          <Script
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GAID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-            }}
-          />
-        </>
-      )}{" "}
     </Head>
   );
 };
