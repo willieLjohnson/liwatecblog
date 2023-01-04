@@ -1,6 +1,6 @@
 import cn from "classnames";
 import HoverButton from "./hover-button";
-import { GITHUB, LIWATEC, REDDIT, TWITTER, YOUTUBE } from "../lib/constants";
+import { GITHUB, REDDIT, TWITTER, YOUTUBE } from "../lib/constants";
 type Props = {
   className: string;
   buttonClasses?: string;
@@ -9,9 +9,7 @@ type Props = {
 const Socials = ({ className, buttonClasses }: Props) => {
   return (
     <h4
-      className={cn(
-        `${className} text-center text-lg flex flex-row justify-between space-x-[2rem]`
-      )}
+      className={cn(`${className} text-center flex flex-row justify-between`)}
     >
       <HoverButton
         className={buttonClasses}

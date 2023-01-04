@@ -20,3 +20,137 @@
 .markdown h3 {
   @apply text-2xl mt-8 mb-4 leading-snug;
 }
+
+.markdown p > code  {
+  color: #fe773f;
+  background-color:  #fe773f12;
+  border-radius: 0.5em;
+  border-width: 0.15em;
+  font-family: monospace;
+  transition: all 0.1s ease-in-out;
+}
+
+.markdown pre code {
+  display: block;
+  white-space: pre;
+  max-width: 100%;
+  padding: 1em;
+}
+
+.markdown blockquote {
+  font-size: 1.15em;
+  color: #644c48;
+  background-color: #fe773413;
+  border-radius: 1em;
+  padding: 1.05em;
+  border: 1px solid #428bca33;
+  font-weight: 500;
+}
+
+.markdown blockquote code {
+  background-color: #fe773488;
+  color: #49495a;
+  font-weight: 600;
+  padding: 0.1rem;
+  border: 0.18rem solid black;
+  margin: 0.15rem;
+}
+
+.markdown blockquote p {
+  background-color: transparent;
+  padding-left: 3.5em;
+}
+
+.markdown blockquote::before {
+  content: "(~￣<￣)~";
+  display: block;
+  font-weight: 600;
+  font-size: 1.3em;
+  top: 1.7em;
+  right: 6em;
+  position: relative;
+  height: 0;
+  color: #fe7734;
+}
+
+.markdown blockquote::after {
+  content: "Bud:";
+  display: block;
+  font-weight: 500;
+  font-family: monospace;
+  font-size: 1.2rem;
+  top: -5rem;
+  right: -0.1rem;
+  position: relative;
+  height: 0;
+  color: #fe7734;
+}
+
+.markdown {
+  background-color: rgba(255,255,255,0.6);
+}
+
+.markdown .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown p {
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 0.2rem;
+  padding: 0.3em;
+}
+
+.markdown a {
+  color: #fe7734;
+  font-weight: 900;
+  font-family: sans-serif;
+  background: #febeef23;
+  border-radius: 2em;
+  padding: 0.2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin: 0.2em;
+  transition: 0.25s all ease-in-out;
+}
+
+
+.markdown a:hover {
+  margin: 0.3em;
+  padding: 0.3em;
+  font-family: 900;
+  box-shadow: #fe7734 0rem 0.2rem;
+  border: 0.1rem solid;
+  filter: drop-shadow(0 0 1rem #fe773477);
+}
+
+.markdown img {
+  transition: all 0.5s ease-in-out;
+  filter: drop-shadow(0 0 1rem rgba(255,50,0,0.2));
+}
+.markdown img:hover {
+  filter: drop-shadow(0 0 2rem rgba(255,75,50,0.7));
+}
+
+@media only screen and (max-width: 1000px) {
+  .markdown blockquote {
+    padding-top: 1.5em;
+  }
+  .markdown blockquote p {
+    padding-left: 1rem;
+    padding: 0.8em;
+    padding-top: 0.5rem;
+  }
+  .markdown blockquote::before {
+    display: block;
+    font-size: 1rem;
+    top: -0.2rem;
+    right: 0.2rem;
+    position: relative;
+    height: 0;
+  }
+  .markdown blockquote::after {
+    content: "~~ Bud";
+    top: -1.55rem;
+    right: 0rem;
+    padding-left: 0.1em;
+    position: relative;
+    height: 0;
+  }
+}
+

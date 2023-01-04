@@ -20,11 +20,11 @@ const HoverButton = ({ title, url, img, className, icon }: Props) => {
         href={url}
         target="_blank"
         className={cn({
-          "border-black font-extrabold border-solid p-3 hover:text-red-700  duration-200 transition-all":
+          "font-extrabold border-solid  hover:text-red-700  duration-200 transition-all":
             title,
         })}
       >
-        {icon ? <FontAwesomeIcon size="lg" icon={icon} /> : <></>}
+        {icon ? <FontAwesomeIcon icon={icon} /> : <></>}
         {title ? (
           <span className="bg-black text-white p-[0.5rem] px-[0.8rem] rounded-md text-[2.4rem]">
             {title ?? ""}

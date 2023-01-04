@@ -28,9 +28,6 @@ const PostHeader = ({
   return (
     <>
       <PostTitle>{title}</PostTitle>
-      <div className="hidden md:block md:mb-12">
-        <Avatar name={author.name} picture={author.picture} />
-      </div>
       <div className="mb-8 md:mb-16 sm:mx-0 flex flex-col justify-between">
         {video ? (
           <div className="mx-0 mb-9 flex flex-col items-center">
