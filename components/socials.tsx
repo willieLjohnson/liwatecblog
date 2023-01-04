@@ -13,13 +13,13 @@ const Socials = ({ className, buttonClasses }: Props) => {
     >
       <HoverButton
         className={buttonClasses}
-        icon={["fab", "twitter"]}
-        url={TWITTER}
+        icon={["fab", "reddit"]}
+        url={REDDIT}
       />
       <HoverButton
         className={buttonClasses}
-        icon={["fab", "youtube"]}
-        url={YOUTUBE}
+        icon={["fab", "twitter"]}
+        url={TWITTER}
       />
       <HoverButton
         className={buttonClasses}
@@ -28,8 +28,8 @@ const Socials = ({ className, buttonClasses }: Props) => {
       />
       <HoverButton
         className={buttonClasses}
-        icon={["fab", "reddit"]}
-        url={REDDIT}
+        icon={["fab", "youtube"]}
+        url={YOUTUBE}
       />
     </h4>
   );

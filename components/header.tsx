@@ -3,7 +3,7 @@ import Socials from "./socials";
 
 const Header = () => {
   return (
-    <h2 className="flex flex-row items-center justify-between text-5xl md:text-7xl  font-extrabold tracking-tight md:tracking-wide leading-loose lg:mb-12 mt-4">
+    <h2 className="flex flex-row items-center justify-between text-5xl md:text-7xl  font-extrabold tracking-tight md:tracking-wide leading-loose lg:mb-[2rem] mt-4">
       <Link
         href="/"
         className="lg:pb-[1.5rem] pb-[1rem] text-[3.5rem] items-center hover:underline flex flex-row self-center"
