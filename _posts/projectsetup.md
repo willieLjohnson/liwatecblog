@@ -39,7 +39,7 @@ npm create vite@latest devlon
 Your generated project folder should look like this:
 
 ```properties
-$tree
+tree
 your-awesome-game-name/
 ├── index.html
 ├── node_modules
@@ -59,7 +59,7 @@ your-awesome-game-name/
 You can test it out right now by running:
 
 ```properties
-$ npm run dev
+npm run dev
 ```
 Did you get any errors?
 Make sure you have the latest version of npm installed and before trying again. 
