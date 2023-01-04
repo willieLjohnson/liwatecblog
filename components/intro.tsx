@@ -7,7 +7,7 @@ const Intro = () => {
         ~ \^/
       </h1>
       <Socials
-        className="md:justify-self-end bg-transparent tracking-widest md:self-end px-0 pb-[0.2rem] md:mt-5 text-5xl scale-90"
+        className="md:justify-self-end bg-transparent tracking-widest md:self-end px-0 pb-[0.15rem] md:mt-5 text-5xl scale-90"
         buttonClasses="border-b-0"
       />
     </section>
