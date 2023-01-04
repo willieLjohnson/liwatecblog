@@ -10,7 +10,7 @@ const Socials = ({ className, buttonClasses }: Props) => {
   return (
     <h4
       className={cn(
-        `${className}text-center text-lg flex flex-row justify-between space-x-[2rem]`
+        `${className} text-center text-lg flex flex-row justify-between space-x-[2rem]`
       )}
     >
       <HoverButton
