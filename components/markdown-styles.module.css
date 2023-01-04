@@ -103,6 +103,7 @@
   background: #febeef23;
   border-radius: 2em;
   padding: 0.2em;
+  text-decoration: underline;
   padding-left: 0.5em;
   padding-right: 0.5em;
   margin: 0.2em;
@@ -127,8 +128,8 @@
 
 .markdown img:hover {
   filter: drop-shadow(0 0 2rem rgba(255,75,50,0.7));
-  transform: scale(1.5);
-  border: solid #fe773f 0.2rem;
+  transform: scale(1.4);
+  height: auto;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -157,7 +158,7 @@
     height: 0;
   }
   .markdown img:hover {
-    transform: scale(1.3);
+    transform: scale(1.2);
   }
 }
 
