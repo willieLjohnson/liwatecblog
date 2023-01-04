@@ -1,7 +1,15 @@
 import type Author from "./author";
 
-type PostType = {
+export type Series = {
+  name: string;
+  id: number;
+  next?: string;
+  prev?: string;
+};
+
+export type Post = {
   video: string;
+  series?: Series;
   slug: string;
   title: string;
   date: string;
@@ -14,7 +22,4 @@ type PostType = {
   };
   content: string;
   history: string;
-  morePosts: PostType[];
 };
-
-export default PostType;

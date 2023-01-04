@@ -6,8 +6,7 @@ import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import { BLOG_NAME } from "../lib/constants";
-import Post from "../interfaces/post";
-import markdownToHtml from "../lib/markdownToHtml";
+import { type Post } from "../interfaces/post";
 
 type Props = {
   allPosts: Post[];
@@ -45,6 +44,7 @@ export default function Index({ allPosts }: Props) {
 export const getStaticProps = async () => {
   const allPosts = getAllPosts([
     "video",
+    "series",
     "title",
     "date",
     "slug",

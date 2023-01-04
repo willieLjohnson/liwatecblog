@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 body {
-  background-image: radial-gradient(#000000 0.5px, transparent 0.1px);
+  background-image: radial-gradient(#888888 0.5px, transparent 0.5px);
   background-size: 20px 19px;
   background-position: -20px -20px;
 }
 
-code {
-  color: #000003;
-  background-color:  #ffbb7725;
+p > code  {
+  color: #fe773f;
+  background-color:  #fe773f12;
   border-radius: 0.5em;
   border-width: 0.15em;
   font-family: monospace;
@@ -20,16 +20,14 @@ code {
 pre code {
   display: block;
   white-space: pre;
-  -webkit-overflow-scrolling: touch;
-  overflow-x: scroll;
   max-width: 100%;
   padding: 1em;
 }
 
 blockquote {
   font-size: 1.15em;
-  color: #000003;
-  background-color: rgba(0, 150, 230, 0.15);
+  color: #644c48;
+  background-color: #fe773413;
   border-radius: 1em;
   padding: 1.05em;
   border: 1px solid #428bca33;
@@ -37,8 +35,8 @@ blockquote {
 }
 
 blockquote code {
-  background-color: rgba(255, 55, 0, 0.5);
-  color: rgba(0, 0, 50, 1);
+  background-color: #fe773488;
+  color: #49495a;
   font-weight: 600;
   padding: 0.1rem;
   border: 0.18rem solid black;
@@ -59,7 +57,7 @@ blockquote::before {
   right: 6em;
   position: relative;
   height: 0;
-  color: #f55;
+  color: #fe7734;
 }
 
 blockquote::after {
@@ -72,38 +70,40 @@ blockquote::after {
   right: -0.1rem;
   position: relative;
   height: 0;
-  color: #f55;
+  color: #fe7734;
 }
 
 article {
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255,255,255,0.6);
 }
 
 article h1,h2,h3,h4,p {
   background-color: rgba(255,255,255,0.9);
+  border-radius: 0.2rem;
   padding: 0.3em;
 }
 
 article a {
-  color: blue;
+  color: #fe7734;
   font-weight: 900;
   font-family: sans-serif;
-  background: rgba(0,0,255,0.03);
+  background: #febeef23;
   border-radius: 2em;
   padding: 0.2em;
   padding-left: 0.5em;
   padding-right: 0.5em;
   margin: 0.2em;
-  transition: 0.1s all ease-in-out;
+  transition: 0.25s all ease-in-out;
 }
 
 
 article a:hover {
-  margin: 0.4em 0.3em 0.4em 0.3em;
-  padding: 0.5em 0.3em 0.5em 0.3em;
+  margin: 0.3em;
+  padding: 0.3em;
   font-family: 900;
-  border: 1px solid blue;
-  filter: drop-shadow(0 0 1rem rgba(255,100,0,0.2));
+  box-shadow: #fe7734 0rem 0.2rem;
+  border: 0.1rem solid;
+  filter: drop-shadow(0 0 1rem #fe773477);
 }
 article img {
   transition: all 0.5s ease-in-out;
@@ -129,7 +129,6 @@ article img:hover {
     right: 0.2rem;
     position: relative;
     height: 0;
-    color: #f55;
   }
   blockquote::after {
     content: "~~ Bud";
@@ -138,6 +137,5 @@ article img:hover {
     padding-left: 0.1em;
     position: relative;
     height: 0;
-    color: #f55;
   }
 }

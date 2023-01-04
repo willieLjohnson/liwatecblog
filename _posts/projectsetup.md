@@ -3,37 +3,43 @@
 title: 'Creating a Game using Vite, BabylonJS, and TypeScript Part One:  A Basic Scene with Objects, a Light, and a Camera'
 coverImage: '/assets/blog/setup/squidgame.png'
 date: '2022-12-31T17:55:07'
-updated: '2023-01-01T00:25:00'
+updated: '2023-01-03T03:33:33'
 author:
   name: WL
   picture: '/assets/blog/authors/wLiwa-320.png'
 ogImage: '/assets/blog/setup/squidgame.png'
 tag: gamdev
+series: 
+  name: vbt
+  id: 0
+  next: gameworld
 
 ---
 
-## TypeScript, Vite, and BabylonJS
+# TypeScript, Vite, and BabylonJS
 
 If you need a fast, reliable, and lightweight way to create 3D browser games you've landed on the right post. With [BabylonJS](https://www.babylonjs.com), a powerful 3D engine; [Vite](https://www.vitejs.dev), one of the latest fast and lightweight build tools; and [TypeScript](https://www.typescriptlang.org), arguably a better version of JavaScript, we can create decent-sized WebGL games with realistic graphics, physics, skeletal animation, and post-processing effects just to name a few of the features.
 
 Let's get right into it!
 
+
 ## Creating a Vite Project
 
 They've made it nice and simple to install Vite with a helpful CLI:
 
-**Run the following commands:**
 
-> Pick the options `Vanilla` and `TypeScript` for this project. Replace `devlon` with the name of your game.
+> **When running these commands,** replace `devlon` with the name of your game and pick the options `Vanilla` then `TypeScript` on the CLI menus that appear.
+
 ```bash
 npm create vite@latest devlon
-cd devlon
-npm install
+&& cd devlon
+&& npm install
 ```
 
 Your generated project folder should look like this:
 
 ```bash
+$tree
 your-awesome-game-name/
 ├── index.html
 ├── node_modules
@@ -53,10 +59,12 @@ your-awesome-game-name/
 You can test it out right now by running:
 
 ```bash
-npm run dev
+$ npm run dev
 ```
+Did you get any errors?
+Make sure you have the latest version of npm installed and before trying again. 
 
-We can continue on to our next step if this runs without any errors.
+Next we can install BabylonJS and configure everything to work together.
 
 ## Installing BabylonJS
 
@@ -73,7 +81,7 @@ We only need BabyonJS core for now, but we install the loaders and GUI package i
 We need to configure Vite to use BabylonJS's max script so that it's easier to code and debug.
 
 Create a file called `vite.config.js` in your project root and add the following:
-> This simply tells vite to use the `babylon.max`, a human-readable readable script version.
+> This simply tells vite to use the `babylon.max`. This is the human-readable readable script version. `babylonjs` is the optimized-for-speed version for when we launch to production.
 
 ```javascript
 import { defineConfig } from 'vite';
@@ -164,7 +172,7 @@ The main and potentially only HTML file you'll need. It'll start off pretty basi
 
 So far so good.
 
-### Scripts
+## Scripts
 
 The following additions and changes will happen in the `src/` folder.
 

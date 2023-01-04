@@ -3,7 +3,7 @@
 title: 'Choosing the Right Programming Language or Game Engine for Your Game'
 coverImage: '/assets/blog/gameprogramming/code.png'
 date: '2022-12-29T06:55:07'
-updated: '2022-12-29T21:30:00'
+updated: '2023-01-03T03:33:33'
 author:
   name: WL
   picture: '/assets/blog/authors/wLiwa-320.png'
@@ -12,11 +12,11 @@ tag: gamdev
 
 ---
 
-## Choosing The Right Programming Language or Game Engine for Your Game.
+# What Determines the Tools
 
 As a game developer, one of the most important decisions you'll make before even starting your game is choosing the right programming language and game engine to use. They determine the tools and features you have at your disposal, as well as the overall performance and capabilities of your game. However there are so many options out there and they all look pretty capable, especially now that everything has caught up to speed in 2023. So which one should you pick? In this article, we'll check out some of these options and see what best fits the development needs of your project.
 
-### Which one to pick?
+## Which one to pick?
 
 Here are the three options we will explore ranging from super basic to a fully featured Super Engine.
 
@@ -32,15 +32,15 @@ Let's begin by diving into the most basic way of creating a game: with just a pr
 
 There are 8945 (<https://hopl.info/>) programming languages to choose from, each with its own strengths and weaknesses. We'll be talking about C++, C#, Go, Rust, TypeScript, Lua, and Python; solid choices in the game development industry. Here are some things to consider when choosing the right programming language for your game:
 
-##### Consider your goals.
+### Consider your goals.
 
 What kind of game are you looking to make? Different programming languages are better suited to different types of games. For example, if you want to create fast-paced, action-packed games, a language like C++ might be a good choice. C++ is known for its performance and low-level access to hardware, which can be useful for creating demanding games. On the other hand, if you want to create more casual, puzzle-based games, a language like Python might be a better fit. Python is known for its simplicity and ease of use, making it a good choice for beginners or for prototyping ideas quickly.
 
-##### Look for versatility.
+### Look for versatility.
 
 It's important to choose a programming language that is versatile enough to handle a wide range of tasks. This will allow you to be more productive and efficient as you work on your game. For example, C# is a popular choice for game development due to its versatility. It can be used to create a wide range of games, from 2D mobile games to complex 3D PC games. Additionally, C# has a large and active community, which means you'll have access to a wealth of resources and support as you work on your game.
     
-##### Focus on speed. 
+### Focus on speed. 
 
 Game development often requires fast processing speeds, so it's important to choose a programming language that can keep up. C++ is generally considered one of the fastest languages, but there are other options like Rust and Go that can also be good choices. Rust is a relatively new programming language that has gained popularity in the game development community due to its speed and safety features. Go is another fast language that is known for its simplicity and concurrency support, which can be useful for creating multiplayer games.
 
@@ -84,7 +84,7 @@ That being said, there are also potential drawbacks to using a game engine. Some
 
 Once you've chosen a programming language or game engine, the next step is to create the game itself. It's time for all the research to pay off. Here are some tips to help get you started.
 
-The post is getting too long to get into detail about this here. If you want more tips, check out <https:www.willieliwa.com/posts/startgame> on how to get started in game dev.
+The post is getting too long to get into detail about this here. If you want more tips, check out ['Creating a Game using Vite, BabylonJS, and TypeScript Part One:  A Basic Scene with Objects, a Light, and a Camera'](https:www.willieliwa.com/posts/projectsetup) for how to get started.
 
 ## Being Versatile, Fast, and Ready to Learn
 

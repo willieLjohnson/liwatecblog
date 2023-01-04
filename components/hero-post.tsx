@@ -4,6 +4,7 @@ import CoverImage from "./cover-image";
 import Link from "next/link";
 import type Author from "../interfaces/author";
 import { truncateString } from "../pages/posts/[slug]";
+import { Markdown } from "./markdown-text";
 
 type Props = {
   title: string;
@@ -25,7 +26,12 @@ const HeroPost = ({
   return (
     <section>
       <div className="mb-8 md:mb-16">
-        <CoverImage title={title} src={coverImage} slug={slug} />
+        <CoverImage
+          className="hover:scale-105"
+          title={title}
+          src={coverImage}
+          slug={slug}
+        />
       </div>
       <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
         <div>
@@ -44,7 +50,7 @@ const HeroPost = ({
         </div>
         <div>
           <p className="text-lg leading-relaxed mb-4">
-            {truncateString(excerpt, 750)}
+            <Markdown content={truncateString(excerpt, 750)} />
           </p>
           <Avatar name={author.name} picture={author.picture} />
         </div>

@@ -1,0 +1,36 @@
+.code-syntax {
+  color: black;
+}
+
+.container > .code-syntax {
+    width:100%;
+    height: 100%;
+    color: #D4D4D4;
+    background-color: rgb(0, 0, 0) !important;
+    font-family: Droid Sans Mono;
+    letter-spacing: 1.5px;
+    border-radius: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -10px;
+    font-weight: 500;
+}
+
+.container > .code-syntax .language-typescript > span:hover {
+    background-color: rgba(224, 224, 173, 0.2) !important;
+}
+
+.container > .code-syntax  .linenumber {
+    color: rgb(126, 120, 135) !important;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: transparent;
+    border-right: 2px solid rgb(126, 120, 135);
+}
+
+.container > .code-syntax  .linenumber:hover {
+    color: rgb(213, 214, 133) !important;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+

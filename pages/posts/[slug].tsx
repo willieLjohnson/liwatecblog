@@ -5,19 +5,20 @@ import PostBody from "../../components/post-body";
 import Header from "../../components/header";
 import PostHeader from "../../components/post-header";
 import PostFooter from "../../components/post-footer";
-import MoreStories from "../../components/more-stories";
 import Layout from "../../components/layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import Head from "next/head";
-import { CMS_NAME } from "../../lib/constants";
 import markdownToHtml from "../../lib/markdownToHtml";
-import type PostType from "../../interfaces/post";
-import Link from "next/link";
+import { type Post } from "../../interfaces/post";
+import { SeriesBar } from "../../components/series";
+import Error404 from "../404";
+import MoreStories from "../../components/more-stories";
+import HeroPost from "../../components/hero-post";
 
 type Props = {
-  post: PostType;
-  morePosts: PostType[];
+  post: Post;
+  allPosts?: Post[];
   preview?: boolean;
 };
 
@@ -31,10 +32,13 @@ export function truncateString(str: string, num: number): string {
   return str.slice(0, num) + "...";
 }
 
-export default function Post({ post, morePosts, preview }: Props) {
+export default function Post({ post, allPosts, preview }: Props) {
+  const heroPost = allPosts[0];
+  const morePosts = allPosts.slice(1);
+
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />;
+    return <Error404 />;
   }
   return (
     <Layout preview={preview}>
@@ -136,11 +140,23 @@ export default function Post({ post, morePosts, preview }: Props) {
               coverImage={post.coverImage}
               date={post.date}
               author={post.author}
+              series={post.series}
             />
             <PostBody content={post.content} />
             <PostFooter post={post} />
+            <>
+              {post.series ? (
+                <SeriesBar
+                  className="flex flex-row lg:justify-center lg:space-x-28 my-4"
+                  series={post.series}
+                />
+              ) : (
+                <></>
+              )}
+            </>
           </article>
         )}
+        <MoreStories posts={[allPosts[2], allPosts[3]]} />
       </Container>
     </Layout>
   );
@@ -149,12 +165,15 @@ export default function Post({ post, morePosts, preview }: Props) {
 type Params = {
   params: {
     slug: string;
+    allPosts?: Post[];
   };
 };
 
 export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
+  const allPosts = getAllPosts([
+    "slug",
     "video",
+    "series",
     "title",
     "excerpt",
     "date",
@@ -165,24 +184,35 @@ export async function getStaticProps({ params }: Params) {
     "ogImage",
     "coverImage",
     "history",
-    "morePosts",
   ]);
-  const content = await markdownToHtml(post.content || "");
-  const excerpt = await markdownToHtml(post.excerpt || "");
+  const post = getPostBySlug(params.slug, [
+    "video",
+    "series",
+    "title",
+    "excerpt",
+    "date",
+    "updated",
+    "slug",
+    "author",
+    "content",
+    "ogImage",
+    "coverImage",
+    "history",
+  ]);
 
+  console.log(params.allPosts);
   return {
     props: {
+      allPosts: allPosts,
       post: {
         ...post,
-        content,
-        excerpt,
       },
     },
   };
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(["slug"]);
+  const posts: Post[] = getAllPosts(["slug"]);
   return {
     paths: posts.map((post) => {
       return {

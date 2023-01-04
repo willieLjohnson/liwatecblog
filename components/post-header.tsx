@@ -4,23 +4,34 @@ import CoverImage from "./cover-image";
 import PostTitle from "./post-title";
 import type Author from "../interfaces/author";
 import cn from "classnames";
+import Link from "next/link";
+import { type Series } from "../interfaces/post";
+import { SeriesBar } from "./series";
 
 type Props = {
   title: string;
+  series?: Series;
   coverImage: string;
   video?: string;
   date: string;
   author: Author;
 };
 
-const PostHeader = ({ title, coverImage, video, date, author }: Props) => {
+const PostHeader = ({
+  title,
+  series,
+  coverImage,
+  video,
+  date,
+  author,
+}: Props) => {
   return (
     <>
       <PostTitle>{title}</PostTitle>
       <div className="hidden md:block md:mb-12">
         <Avatar name={author.name} picture={author.picture} />
       </div>
-      <div className="mb-8 md:mb-16 sm:mx-0">
+      <div className="mb-8 md:mb-16 sm:mx-0 flex flex-col justify-between">
         {video ? (
           <div className="mx-0 mb-9 flex flex-col items-center">
             <iframe
@@ -39,11 +50,13 @@ const PostHeader = ({ title, coverImage, video, date, author }: Props) => {
         ) : (
           <CoverImage title={title} src={coverImage} />
         )}
+        {series ? (
+          <SeriesBar className="mt-5 text-[1.3rem]" series={series} />
+        ) : (
+          <></>
+        )}
       </div>
       <div className="max-w-2xl mx-auto">
-        <div className="block md:hidden mb-6">
-          <Avatar name={author.name} picture={author.picture} />
-        </div>
         <div className="mb-6 text-lg">
           <DateFormatter dateString={date} />
         </div>
@@ -51,5 +64,4 @@ const PostHeader = ({ title, coverImage, video, date, author }: Props) => {
     </>
   );
 };
-
 export default PostHeader;

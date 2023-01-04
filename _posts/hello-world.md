@@ -2,14 +2,14 @@
 title: 'Hello World'
 coverImage: '/assets/blog/hello-world/cover.jpg'
 date: '2022-12-26T05:35:07'
-updated: '2022-12-26T05:35:07'
+updated: '2023-01-03T03:33:33'
 author:
   name: WL
   picture: '/assets/blog/authors/wLiwa-320.png'
 ogImage: '/assets/blog/hello-world/cover.jpg'
 ---
 
-## Hello World! 👋🏾
+# Hello World! 👋🏾
 
 ## hallo
 
