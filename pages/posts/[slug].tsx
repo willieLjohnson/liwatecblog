@@ -22,14 +22,18 @@ type Props = {
   preview?: boolean;
 };
 
-export function truncateString(str: string, num: number): string {
+export function truncateString(
+  str: string,
+  num: number,
+  newLine: boolean = true
+): string {
   if (str === undefined) {
     return "";
   }
   if (str.length <= num) {
     return str;
   }
-  return str.slice(0, num) + "...";
+  return str.slice(0, num) + "..." + (newLine ? "\n" : "");
 }
 
 export default function Post({ post, allPosts, preview }: Props) {

@@ -134,6 +134,10 @@ import Entity from "./entity";
 export default class Player extends Entity {
   constructor(public scene: Scene) {
     super("player", new Vector3(), 0.2); 
+    // Change the color to green.
+    var playerMat = new StandardMaterial("player", scene);
+    playerMat.diffuseColor = new Color3(0.5, 1, 0.5);
+    this.mesh.material = material;
   }
 }
 ```
@@ -192,11 +196,15 @@ export default class Game {
 
 Nice! We can now remove all the CreateSphere code inside the `createScene` function.
 
+We can also change the color's of the game world to make the entities stand out more.
+
 ```tsx
 // ... game.ts
 
 var createScene = function (engine: Engine, canvas: HTMLCanvasElement) {
   var scene = new Scene(engine);
+  scene.clearColor = new Color4(0.9, 1, 1, 1); // <--- Change color of sky.
+
   var camera = new FreeCamera("camera1", new Vector3(0, 5, -10), scene);
 
   camera.setTarget(Vector3.Zero());
@@ -205,11 +213,17 @@ var createScene = function (engine: Engine, canvas: HTMLCanvasElement) {
   var light = new HemisphericLight("light", new Vector3(0, 1, 0), scene);
   light.intensity = 0.7;
 
-  /// x Remove CreateSphere code 
+  // + add new ambient light to make colors pop.
+  var ambient = new HemisphericLight("ambient", new Vector3(1, 1, 0), scene);
+  ambient.groundColor = new Color3(0.9, 1, 1);
+  ambient.intensity = 0.2;
 
+  /// - Remove `CreateSphere` code 
+
+  /// + Make the ground object much bigger.
   var ground = MeshBuilder.CreateGround(
     "ground",
-    { width: 6, height: 6 },
+    { width: 25, height: 25 },
     scene
   );
   ground.position.y = -1;
@@ -236,7 +250,9 @@ import Entity from "./entity";
 export default class Player extends Entity {
   constructor(public scene: Scene) {
     super("player", new Vector3(), 0.2);
-
+    var material = new StandardMaterial("material", scene);
+    material.diffuseColor = new Color3(0.5, 1, 0.5);
+    this.mesh.material = material;
     // Register event handlers.
     scene.onKeyboardObservable.add((kbInfo) => {
       switch (kbInfo.type) {
@@ -321,7 +337,7 @@ export default class Game {
     // ...
     this.camera = new UniversalCamera(
       "cam",
-      new Vector3(0, 20, -30), <--- Top down view.
+      new Vector3(0, 10, -10), <--- Top down view.
       this.scene
     );
     this.camRoot = new TransformNode("root");
@@ -406,7 +422,7 @@ private setupCamera(): UniversalCamera {
 
   // The camera points to the root's position.
   this.camera.lockedTarget = this.camRoot.position;
-  this.camera.fov = 0.47350045992678597; 
+  this.camera.fov = 1.1; // <--- zoom out a bit, default is 0.8 
   this.camera.parent = yTilt;
 
   this.scene.activeCamera = this.camera;
