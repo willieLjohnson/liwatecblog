@@ -1,9 +1,9 @@
 ---
 
-title: 'Creating a Game using Vite, BabylonJS, and TypeScript Part One:  A Basic Scene with Objects, a Light, and a Camera'
+title: 'Part One: Creating a Game using Vite, BabylonJS, and TypeScript - A Basic Scene with Objects, a Light, and a Camera'
 coverImage: '/assets/blog/setup/squidgame.png'
 date: '2022-12-31T17:55:07'
-updated: '2023-01-03T03:33:33'
+updated: '2023-01-05T02:05:07'
 author:
   name: WL
   picture: '/assets/blog/authors/wLiwa-320.png'

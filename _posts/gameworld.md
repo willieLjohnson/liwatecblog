@@ -1,9 +1,9 @@
 ---
 
-title: 'Creating a Game using Vite, BabylonJS, and TypeScript Part Two: The World, the Player, and a Following Camera'
+title: 'Part Two: Creating Games using Vite, BabylonJS, and TypeScript - The Game World and Player Input'
 coverImage: '/assets/blog/gameworld/movement.gif'
 date: '2023-01-04T16:28:07'
-updated: '2023-01-04T16:28:07'
+updated: '2023-01-05T02:05:07'
 author:
   name: WL
   picture: '/assets/blog/authors/wLiwa-320.png'
