@@ -10,3 +10,4 @@ export const YOUTUBE = "https://www.youtube.com/@wLiwa";
 export const LIWATEC = "https://www.liwatec.xyz";
 export const HOME_OG_IMAGE_URL = "assets/blog/authors/wLiwa.png";
 export const GAID = "G-6DKLCP2C2Z";
+export const GTAGM = "GTM-P6WSRLV";

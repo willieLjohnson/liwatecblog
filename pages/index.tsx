@@ -5,11 +5,12 @@ import Intro from "../components/intro";
 import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
-import { BLOG_DESC, BLOG_NAME } from "../lib/constants";
+import { BLOG_DESC, BLOG_NAME, GAID, GTAGM } from "../lib/constants";
 import { type Post } from "../interfaces/post";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { truncateString } from "./posts/[slug]";
+import Script from "next/script";
 
 type Props = {
   allPosts: Post[];

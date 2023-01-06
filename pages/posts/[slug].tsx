@@ -15,6 +15,8 @@ import { SeriesBar } from "../../components/series";
 import Error404 from "../404";
 import MoreStories from "../../components/more-stories";
 import HeroPost from "../../components/hero-post";
+import Script from "next/script";
+import { GAID } from "../../lib/constants";
 
 type Props = {
   post: Post;
