@@ -23,7 +23,7 @@ The core element of every game is the player's character and how it feels to con
 
 ## 1. Creating the Classes
 
-**All code available on [github](https://github.com/willieLjohnson/vitetsbabylon-guide)**
+This is Part Two of the series. You can start from part one or grab the *code available on [github](https://github.com/willieLjohnson/vitetsbabylon-guide)**
 
 We'll keep everything in modular code files located in `./src/world/`.
 This will have the `Entity`, `World`, and `Player` classes to make clear up some code in Game.ts.
