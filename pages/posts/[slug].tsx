@@ -17,6 +17,7 @@ import MoreStories from "../../components/more-stories";
 import HeroPost from "../../components/hero-post";
 import Script from "next/script";
 import { GAID } from "../../lib/constants";
+import { GTAGS } from "../../components/gtags";
 
 type Props = {
   post: Post;
@@ -140,6 +141,7 @@ export default function Post({ post, allPosts, preview }: Props) {
                 </>
               )}
             </Head>
+            <GTAGS />
             <PostHeader
               title={post.title}
               video={post.video}

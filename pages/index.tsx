@@ -11,6 +11,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { truncateString } from "./posts/[slug]";
 import Script from "next/script";
+import { GTAGS } from "../components/gtags";
 
 type Props = {
   allPosts: Post[];
@@ -100,6 +101,7 @@ export default function Index({ allPosts }: Props) {
           )}
         </Head>
         <Container>
+          <GTAGS />
           <Intro />
           {heroPost && (
             <HeroPost
