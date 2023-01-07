@@ -6,7 +6,13 @@ config.autoAddCss = false;
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { faCog } from "@fortawesome/free-solid-svg-icons";
 library.add(fab, faCog);
+import { Analytics } from "@vercel/analytics/react";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Component {...pageProps} />
+      <Analytics />
+    </>
+  );
 }
