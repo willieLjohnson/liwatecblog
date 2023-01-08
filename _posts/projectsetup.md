@@ -3,7 +3,7 @@
 title: 'How to Create Games using TypeScript, Vite, and BabylonJS Part One: A Basic Scene with Objects, a Light, and a Camera'
 coverImage: '/assets/blog/setup/squidgame.png'
 date: '2022-12-31T17:55:07'
-updated: '2023-01-05T02:05:07'
+updated: '2023-01-08T11:00:07'
 author:
   name: WL
   picture: '/assets/blog/authors/wLiwa-320.png'
@@ -342,4 +342,4 @@ You should see this:
 ![basicscene.png: A picture of a ball and a sphere](https://www.willieliwa.com/assets/blog/setup/scene.png)
 > A ball and a plane -.- ....
 
-But a great start! You'll have to go to the next chapter for the flashy game features -----> [Building the Game World](/gameworld)
+But a great start! You'll have to go to the next chapter for the flashy game features :D
