@@ -3,8 +3,8 @@ import type Author from "./author";
 export type Series = {
   name: string;
   id: number;
-  next?: string;
-  prev?: string;
+  next: string;
+  prev: string;
 };
 
 export type Game = {
@@ -13,10 +13,10 @@ export type Game = {
 };
 
 export type Post = {
-  video?: string;
-  game?: Game;
-  clip?: string;
-  series?: Series;
+  video: string;
+  game: Game;
+  clip: string;
+  series: Series;
   slug: string;
   title: string;
   date: string;

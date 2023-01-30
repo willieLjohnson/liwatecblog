@@ -36,19 +36,17 @@ const PostHeader = ({
     <>
       <PostTitle>{title}</PostTitle>
       <div className="mb-8 md:mb-16 sm:mx-0 flex flex-col justify-between">
-        {video || game || clip ? (
-          <Frame
-            title={title}
-            clip={clip}
-            game={game}
-            video={video}
-            width={width}
-            height={height}
-            containerHeight={containerHeight}
-          />
-        ) : (
-          <CoverImage title={title} src={coverImage} />
-        )}
+        <Frame
+          title={title}
+          clip={clip}
+          game={game}
+          cover={coverImage}
+          video={video}
+          width={width}
+          height={height}
+          containerHeight={containerHeight}
+        />
+
         {series ? (
           <SeriesBar className="mt-5 text-[1.3rem]" series={series} />
         ) : (

@@ -1,12 +1,14 @@
 import { type Game } from "../interfaces/post";
 import cn from "classnames";
 import { ReactJSXElement } from "@emotion/react/types/jsx-namespace";
+import CoverImage from "./cover-image";
 
 type Props = {
   title: string;
   clip?: string;
   video?: string;
   game?: Game;
+  cover?: string;
   width?: string;
   height?: string;
   containerHeight?: string;
@@ -16,17 +18,19 @@ export const Frame = ({
   title,
   clip,
   video,
+  cover,
   game,
   width,
   height,
   containerHeight = "h-[30rem]",
 }: Props) => {
-  const gotVideo = video != undefined;
-  const gotGame = game != undefined;
-  const gotClip = clip != undefined;
+  const gotVideo = video !== undefined;
+  const gotGame = game !== undefined;
+  const gotClip = clip !== undefined;
+  const gotCover = cover !== undefined;
 
   let frame: ReactJSXElement;
-
+  console.log(cover);
   if (gotVideo) {
     frame = (
       <iframe
@@ -41,9 +45,7 @@ export const Frame = ({
         allowFullScreen
       ></iframe>
     );
-  }
-
-  if (gotGame) {
+  } else if (gotGame) {
     frame = (
       <iframe
         width={width}
@@ -59,9 +61,7 @@ export const Frame = ({
         <a href={game.href}>{title}</a>
       </iframe>
     );
-  }
-
-  if (gotClip) {
+  } else if (gotClip) {
     frame = (
       <iframe
         width={width}

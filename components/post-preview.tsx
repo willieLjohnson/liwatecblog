@@ -1,11 +1,8 @@
-import Avatar from "./avatar";
 import DateFormatter from "./date-formatter";
 import CoverImage from "./cover-image";
 import Link from "next/link";
 import type Author from "../interfaces/author";
 import markdownToHtml from "../lib/markdownToHtml";
-import markdownStyles from "./markdown-styles.module.css";
-import cn from "classnames";
 import { type Series, type Game } from "../interfaces/post";
 import { Markdown } from "./markdown-text";
 import { Frame } from "./frames";
@@ -26,7 +23,6 @@ type Props = {
 const PostPreview = ({
   video,
   clip,
-  game,
   series,
   title,
   coverImage,
@@ -34,26 +30,34 @@ const PostPreview = ({
   excerpt,
   slug,
 }: Props) => {
+  const gotClip = typeof clip !== "undefined";
+  const gotVideo = typeof video !== "undefined";
+
+  const CoverFrame = () => {
+    let frame;
+
+    if (gotClip) {
+      frame = <Frame title={title} clip={clip} />;
+    } else if (gotVideo) {
+      frame = <Frame title={title} video={video} />;
+    } else {
+      frame = (
+        <CoverImage
+          className="hover:scale-110"
+          slug={slug}
+          title={title}
+          src={coverImage}
+        />
+      );
+    }
+    console.log(frame);
+    return frame;
+  };
+
   return (
     <div>
       <div className="mb-5">
-        {video || clip || game ? (
-          <div className="mx-0">
-            <Frame
-              title={title || undefined}
-              video={video || undefined}
-              game={game || undefined}
-              clip={clip || undefined}
-            />
-          </div>
-        ) : (
-          <CoverImage
-            className="hover:scale-110"
-            slug={slug}
-            title={title}
-            src={coverImage}
-          />
-        )}
+        <div className="mx-0">{CoverFrame()}</div>
       </div>
       <h3 className="text-3xl mb-3 leading-snug hover:drop-shadow-xl hover:shadow-red-200 hover:border-2 rounded-xl transition-all duration-200 ">
         <Link

@@ -1,6 +1,8 @@
 ---
 
 title: 'WAVE GAME'
+clip: '/assets/games/clip-wave.mp4'
+coverImage: '/assets/games/cover-wave.png'
 game: 
   src: 'https://itch.io/embed/675210'
   href: 'https://willieljohnson.itch.io/wave-shooter'

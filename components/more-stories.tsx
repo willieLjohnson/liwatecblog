@@ -32,9 +32,9 @@ const MoreStories = ({ className, posts }: Props) => {
             author={post.author}
             slug={post.slug}
             excerpt={post.excerpt}
-            video={post.video || ""}
-            clip={post.clip || ""}
-            game={post.game || undefined}
+            video={post.video}
+            clip={post.clip}
+            game={post.game}
           />
         ))}
       </div>
