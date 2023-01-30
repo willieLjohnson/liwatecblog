@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import ErrorPage from "next/error";
 import Container from "../../components/container";
 import PostBody from "../../components/post-body";
 import Header from "../../components/header";
@@ -9,14 +8,10 @@ import Layout from "../../components/layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import Head from "next/head";
-import markdownToHtml from "../../lib/markdownToHtml";
 import { type Post } from "../../interfaces/post";
 import { SeriesBar } from "../../components/series";
 import Error404 from "../404";
 import MoreStories from "../../components/more-stories";
-import HeroPost from "../../components/hero-post";
-import Script from "next/script";
-import { GAID } from "../../lib/constants";
 import { GTAGS } from "../../components/gtags";
 
 type Props = {
@@ -145,10 +140,13 @@ export default function Post({ post, allPosts, preview }: Props) {
             <PostHeader
               title={post.title}
               video={post.video}
+              clip={post.clip}
+              game={post.game}
               coverImage={post.coverImage}
               date={post.date}
               author={post.author}
               series={post.series}
+              containerHeight="h-[45rem]"
             />
             <PostBody content={post.content} />
             <PostFooter post={post} />
@@ -181,6 +179,8 @@ export async function getStaticProps({ params }: Params) {
   const allPosts = getAllPosts([
     "slug",
     "video",
+    "clip",
+    "game",
     "series",
     "title",
     "excerpt",
@@ -195,6 +195,8 @@ export async function getStaticProps({ params }: Params) {
   ]);
   const post = getPostBySlug(params.slug, [
     "video",
+    "clip",
+    "game",
     "series",
     "title",
     "excerpt",

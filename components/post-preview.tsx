@@ -6,11 +6,14 @@ import type Author from "../interfaces/author";
 import markdownToHtml from "../lib/markdownToHtml";
 import markdownStyles from "./markdown-styles.module.css";
 import cn from "classnames";
-import { Series } from "../interfaces/post";
+import { type Series, type Game } from "../interfaces/post";
 import { Markdown } from "./markdown-text";
+import { Frame } from "./frames";
 
 type Props = {
   video?: string;
+  clip?: string;
+  game?: Game;
   series?: Series;
   title: string;
   coverImage: string;
@@ -22,31 +25,26 @@ type Props = {
 
 const PostPreview = ({
   video,
+  clip,
+  game,
   series,
   title,
   coverImage,
   date,
   excerpt,
-  author,
   slug,
 }: Props) => {
   return (
     <div>
       <div className="mb-5">
-        {video ? (
+        {video || clip || game ? (
           <div className="mx-0">
-            <iframe
-              width="1920"
-              height="1080"
-              className={cn("shadow-sm w-full z-20", {
-                "hover:drop-shadow-md hover:scale-110 hover:shadow-red-200 transition-all duration-200  max-h-96 rounded-lg":
-                  slug,
-              })}
-              src={`https://www.youtube.com/embed/${video}`}
-              title={title}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+            <Frame
+              title={title || undefined}
+              video={video || undefined}
+              game={game || undefined}
+              clip={clip || undefined}
+            />
           </div>
         ) : (
           <CoverImage
@@ -86,6 +84,8 @@ type Params = {
     author: string;
     slug: string;
     video?: string;
+    game?: Game;
+    clip?: string;
     series?: Series;
   };
 };

@@ -123,6 +123,8 @@ export default function Index({ allPosts }: Props) {
 export const getStaticProps = async () => {
   const allPosts = getAllPosts([
     "video",
+    "game",
+    "clip",
     "series",
     "title",
     "date",

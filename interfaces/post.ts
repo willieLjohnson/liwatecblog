@@ -7,8 +7,15 @@ export type Series = {
   prev?: string;
 };
 
+export type Game = {
+  src: string;
+  href: string;
+};
+
 export type Post = {
-  video: string;
+  video?: string;
+  game?: Game;
+  clip?: string;
   series?: Series;
   slug: string;
   title: string;

@@ -1,12 +1,5 @@
 import Container from "./container";
 import Link from "next/link";
-import {
-  EXAMPLE_PATH,
-  TWITTER,
-  GITHUB,
-  YOUTUBE,
-  LIWATEC,
-} from "../lib/constants";
 
 import { type Post } from "../interfaces/post";
 import DateFormatter from "./date-formatter";
