@@ -31,7 +31,9 @@ export const Frame = ({
 
   let frame: ReactJSXElement;
   console.log(cover);
-  if (gotVideo) {
+  if (gotCover) {
+    frame = <CoverImage title={title} src={cover} />;
+  } else if (gotVideo) {
     frame = (
       <iframe
         width={width}
@@ -46,11 +48,12 @@ export const Frame = ({
       ></iframe>
     );
   } else if (gotGame) {
+    containerHeight = "h-[40rem]";
     frame = (
       <iframe
         width={width}
-        height={height}
-        className={cn("shadow-xl pt-0 w-full sm:h-96 lg:h-screen rounded-md", {
+        height={670}
+        className={cn("shadow-xl pt-0 w-full rounded-md", {
           "hover:shadow-lg transition-shadow duration-200": title,
         })}
         src={game.src}
@@ -76,6 +79,5 @@ export const Frame = ({
       ></iframe>
     );
   }
-
   return <div className={`${containerHeight} w-full rounded-md`}>{frame}</div>;
 };
